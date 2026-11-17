@@ -1,0 +1,857 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thabile Khukhwane reflects on her personal growth, academic journey, developing confidence and ambitions as a first-year BIDA student.">
+    <meta name="author" content="Thabile Khukhwane">
+    <meta name="theme-color" content="#211333">
+
+    <title>My Individual Reflection | Thabile Khukhwane</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --purple-deep: #211333;
+            --purple: #49315F;
+            --purple-light: #8F79A8;
+            --lilac: #E9DFF3;
+            --lilac-pale: #F7F3FA;
+            --silver: #C9C6D1;
+            --white: #FFFFFF;
+            --ink: #292331;
+            --muted: #77717F;
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--lilac-pale);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--purple-light);
+            outline-offset: 5px;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            z-index: 1000;
+            padding: 12px 20px;
+            border: 1px solid var(--silver);
+            background: var(--purple-deep);
+            color: var(--white);
+            transform: translateY(-160%);
+        }
+
+        .skip-link:focus { transform: translateY(0); }
+
+        .site-header {
+            position: relative;
+            z-index: 10;
+            background: var(--lilac-pale);
+            border-bottom: 1px solid #49315F18;
+        }
+
+        .header-inner {
+            width: min(1280px, 90%);
+            min-height: 82px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand { display: flex; align-items: center; gap: 12px; }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--purple-light);
+            border-radius: 50%;
+            color: var(--purple);
+            font-family: var(--serif);
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .brand-copy { display: grid; }
+
+        .brand-copy strong {
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .brand-copy span {
+            color: var(--muted);
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 17px;
+        }
+
+        .main-nav a {
+            color: #5C5366;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .main-nav a:hover,
+        .main-nav a[aria-current="page"] { color: var(--purple-light); }
+
+        .nav-toggle {
+            display: none;
+            width: 43px;
+            height: 43px;
+            border: 1px solid var(--silver);
+            border-radius: 50%;
+            background: transparent;
+            color: var(--purple-deep);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .article-hero {
+            padding: 85px 0 70px;
+            background:
+                radial-gradient(ellipse at 90% 10%, #8F79A824, transparent 35%),
+                linear-gradient(125deg, #F7F3FA, #E8DDF1);
+            border-bottom: 1px solid #D9D0E2;
+        }
+
+        .article-hero-inner {
+            width: min(1000px, 88%);
+            margin: auto;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--purple);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 32px;
+            height: 1px;
+            background: var(--purple-light);
+        }
+
+        h1, h2, h3 { font-family: var(--serif); font-weight: 400; }
+
+        .article-hero h1 {
+            max-width: 900px;
+            margin-top: 25px;
+            color: var(--purple-deep);
+            font-size: clamp(45px, 7vw, 82px);
+            letter-spacing: -2px;
+            line-height: 1.13;
+        }
+
+        .article-hero h1 em { color: var(--purple-light); }
+
+        .article-subtitle {
+            max-width: 680px;
+            margin-top: 25px;
+            color: #655C6E;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .article-meta span {
+            padding: 8px 12px;
+            border: 1px solid var(--silver);
+            background: #FFFFFF80;
+            color: var(--purple);
+            font-size: 10px;
+        }
+
+        .article-layout {
+            width: min(1000px, 88%);
+            margin: auto;
+            padding: 75px 0 95px;
+            display: grid;
+            grid-template-columns: 190px minmax(0, 1fr);
+            gap: 65px;
+            align-items: start;
+        }
+
+        .article-sidebar {
+            position: sticky;
+            top: 25px;
+        }
+
+        .sidebar-label {
+            color: var(--purple-light);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .article-sidebar p {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.9;
+        }
+
+        .sidebar-rule {
+            height: 1px;
+            margin: 23px 0;
+            background: var(--silver);
+        }
+
+        .article-sidebar a {
+            display: block;
+            padding: 9px 0;
+            border-bottom: 1px solid #49315F14;
+            color: var(--purple);
+            font-size: 11px;
+        }
+
+        .article-sidebar a:hover { color: var(--purple-light); }
+
+        .article-content {
+            min-width: 0;
+            padding: 0 0 10px;
+        }
+
+        .article-opening {
+            margin-bottom: 42px;
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: 25px;
+            line-height: 1.65;
+        }
+
+        .article-opening::first-letter {
+            float: left;
+            margin: 7px 12px 0 0;
+            color: var(--purple-light);
+            font-size: 66px;
+            line-height: 0.85;
+        }
+
+        .article-content section {
+            margin-bottom: 43px;
+            scroll-margin-top: 25px;
+        }
+
+        .article-content h2 {
+            margin-bottom: 17px;
+            color: var(--purple-deep);
+            font-size: 31px;
+            line-height: 1.3;
+        }
+
+        .article-content h2 em { color: var(--purple-light); }
+
+        .article-content p {
+            margin-bottom: 17px;
+            color: #6E6676;
+            font-size: 13px;
+            line-height: 2.05;
+        }
+
+        .reflection-quote {
+            margin: 42px 0;
+            padding: 30px 30px 30px 27px;
+            border-left: 3px solid var(--purple-light);
+            background: var(--white);
+        }
+
+        .reflection-quote blockquote {
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: 25px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .reflection-quote p {
+            margin: 13px 0 0;
+            color: var(--purple-light);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .learning-list {
+            margin: 18px 0 20px;
+            padding-left: 20px;
+        }
+
+        .learning-list li {
+            margin-bottom: 12px;
+            padding-left: 6px;
+            color: #6E6676;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .learning-list li::marker { color: var(--purple-light); }
+
+        .closing-thought {
+            margin-top: 50px;
+            padding: 30px;
+            background: var(--purple-deep);
+        }
+
+        .closing-thought .eyebrow { color: #C7B3DF; }
+
+        .closing-thought .eyebrow::before { background: #C7B3DF; }
+
+        .closing-thought h2 {
+            margin-top: 18px;
+            color: var(--white);
+            font-size: 34px;
+        }
+
+        .closing-thought h2 em { color: #C7B3DF; }
+
+        .closing-thought p {
+            margin-top: 14px;
+            color: #D0C6DB;
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .article-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 35px;
+        }
+
+        .button {
+            min-height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 19px;
+            border: 1px solid var(--purple-deep);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .button-primary {
+            background: var(--purple-deep);
+            color: var(--white);
+        }
+
+        .button-primary:hover { background: var(--purple); }
+
+        .button-secondary { color: var(--purple-deep); }
+
+        .button-secondary:hover { background: var(--lilac); }
+
+        .site-footer {
+            padding: 30px 6%;
+            background: #170D23;
+            color: #C8BECE;
+        }
+
+        .footer-inner {
+            width: min(1180px, 100%);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: var(--white);
+            font-family: var(--serif);
+            font-size: 17px;
+        }
+
+        .footer-note {
+            margin-top: 5px;
+            color: #B2A6BD;
+            font-size: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            color: #D3C8DE;
+            font-size: 10px;
+        }
+
+        .footer-links a:hover { color: var(--white); }
+
+        .copyright {
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid #FFFFFF20;
+            color: #A99BB5;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 1050px) {
+            .header-inner { width: 92%; }
+            .main-nav { gap: 10px; }
+            .main-nav a { font-size: 9px; }
+            .article-layout { gap: 35px; }
+        }
+
+        @media (max-width: 760px) {
+            .header-inner { min-height: 75px; }
+
+            .nav-toggle {
+                display: grid;
+                place-items: center;
+            }
+
+            .main-nav {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0;
+                display: none;
+                padding: 18px 6% 25px;
+                background: var(--lilac-pale);
+                border-bottom: 1px solid var(--silver);
+                box-shadow: 0 15px 25px #2113330B;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .main-nav.is-open { display: flex; flex-direction: column; }
+
+            .main-nav a {
+                padding: 12px 0;
+                border-bottom: 1px solid #49315F12;
+                font-size: 12px;
+            }
+
+            .article-hero { padding: 60px 0; }
+
+            .article-hero h1 { letter-spacing: -1px; }
+
+            .article-layout {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                padding: 50px 0 70px;
+            }
+
+            .article-sidebar { position: static; }
+
+            .article-sidebar nav {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                column-gap: 20px;
+            }
+
+            .article-opening { font-size: 22px; }
+
+            .article-content h2 { font-size: 28px; }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media print {
+            .site-header, .site-footer, .article-sidebar,
+            .skip-link, .article-navigation { display: none !important; }
+
+            body, .article-hero { background: white !important; }
+
+            .article-layout {
+                width: 100%;
+                display: block;
+                padding: 20px 0;
+            }
+
+            .article-hero { padding: 20px 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content ↘</a>
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <a class="brand" href="index.html" aria-label="Thabile Khukhwane home">
+            <span class="brand-mark" aria-hidden="true">T</span>
+            <span class="brand-copy">
+                <strong>Thabile Khukhwane</strong>
+                <span>Personal Portfolio</span>
+            </span>
+        </a>
+
+        <button class="nav-toggle" type="button"
+                aria-label="Open navigation menu"
+                aria-controls="main-navigation"
+                aria-expanded="false">
+            <span aria-hidden="true">☰</span>
+        </button>
+
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="cv.html">My CV</a>
+            <a href="individual-reflection.html" aria-current="page">My Reflection</a>
+            <a href="group-reflection.html">Group Reflection</a>
+            <a href="skills-projects.html">Skills &amp; Projects</a>
+            <a href="application-letter.html">Application Letter</a>
+            <a href="email-template.html">Email Template</a>
+            <a href="study-resources.html">Study Resources</a>
+        </nav>
+
+    </div>
+</header>
+
+<main id="main-content">
+
+    <section class="article-hero">
+        <div class="article-hero-inner">
+
+            <p class="eyebrow">Personal reflective blog · 01</p>
+
+            <h1>
+                Becoming the person
+                <em>I want to be.</em>
+            </h1>
+
+            <p class="article-subtitle">
+                A reflection on learning, personal development and the
+                journey of discovering who I am becoming as a student
+                and as an individual.
+            </p>
+
+            <div class="article-meta">
+                <span>By Thabile Khukhwane</span>
+                <span>Personal growth</span>
+                <span>Academic journey</span>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="article-layout">
+
+        <aside class="article-sidebar">
+            <span class="sidebar-label">In this reflection</span>
+
+            <p>
+                Looking back at my development and considering the person
+                I hope to become.
+            </p>
+
+            <div class="sidebar-rule"></div>
+
+            <nav aria-label="Reflection sections">
+                <a href="#beginning">A new chapter</a>
+                <a href="#learning">My learning journey</a>
+                <a href="#challenges">Challenges and growth</a>
+                <a href="#strengths">What I am discovering</a>
+                <a href="#future">Looking ahead</a>
+            </nav>
+        </aside>
+
+        <article class="article-content">
+
+            <p class="article-opening">
+                Personal growth is not always a dramatic change that
+                happens overnight. Sometimes it is a gradual process of
+                learning, asking questions, recognising what needs to
+                improve and choosing to keep moving forward.
+            </p>
+
+            <section id="beginning">
+                <h2>A new <em>chapter.</em></h2>
+
+                <p>
+                    Beginning my studies in Business Intelligence and Data
+                    Analytics at Botswana Accountancy College represents
+                    an important stage in my educational journey. I am
+                    entering a field that connects business, technology
+                    and information, three areas that interest me because
+                    they offer opportunities to understand problems and
+                    develop practical solutions.
+                </p>
+
+                <p>
+                    Being a first-year student also means that I am still
+                    adjusting, learning and discovering what is expected
+                    of me. I recognise that this stage is about more than
+                    completing academic tasks. It is also an opportunity
+                    to develop discipline, responsibility and a clearer
+                    understanding of my strengths and areas for improvement.
+                </p>
+            </section>
+
+            <section id="learning">
+                <h2>Learning beyond <em>the classroom.</em></h2>
+
+                <p>
+                    My course encourages me to think about the relationship
+                    between information and decision-making. I am interested
+                    in how data can help businesses identify patterns,
+                    understand performance and make informed choices.
+                    Exploring these ideas gives me a reason to keep
+                    developing my analytical and technical abilities.
+                </p>
+
+                <p>
+                    I am also learning that education requires active
+                    participation. Reading, practising, asking questions
+                    and revisiting difficult concepts are all important
+                    parts of building understanding. I want to become
+                    someone who does not simply aim to finish a task,
+                    but makes an effort to understand what the task teaches me.
+                </p>
+
+                <div class="reflection-quote">
+                    <blockquote>
+                        Growth begins when I remain willing to learn,
+                        even when I do not know everything yet.
+                    </blockquote>
+                    <p>A principle I want to carry forward</p>
+                </div>
+            </section>
+
+            <section id="challenges">
+                <h2>Challenges, patience and <em>progress.</em></h2>
+
+                <p>
+                    One lesson I am learning is that personal development
+                    takes patience. New subjects, unfamiliar expectations
+                    and the responsibility of managing my own progress
+                    can require effort and adjustment. I cannot expect
+                    myself to know everything immediately, especially
+                    while I am still building my foundation.
+                </p>
+
+                <p>
+                    Rather than treating every difficulty as a sign that
+                    I cannot succeed, I want to view challenges as
+                    opportunities to identify what I need to practise
+                    and where I need to seek guidance. I can make progress
+                    by organising my work, managing my time carefully
+                    and breaking larger tasks into manageable steps.
+                </p>
+
+                <p>
+                    I also recognise the importance of asking for help
+                    when necessary. Independence does not mean having
+                    every answer alone; it means taking responsibility
+                    for finding ways to move forward.
+                </p>
+            </section>
+
+            <section id="strengths">
+                <h2>What I am discovering <em>about myself.</em></h2>
+
+                <p>
+                    I see curiosity and ambition as important parts of
+                    who I am. I enjoy exploring ideas, learning about
+                    technology and business, and considering the
+                    possibilities available to me. I also value personal
+                    growth because I understand that my abilities can
+                    develop through practice and commitment.
+                </p>
+
+                <p>
+                    My previous experience as a class monitor and school
+                    prefect introduced me to responsibilities that
+                    required me to think beyond myself. These experiences
+                    form part of my understanding of leadership and
+                    accountability, and I want to continue strengthening
+                    those qualities as I progress through college.
+                </p>
+
+                <p>
+                    At the same time, I know that there is still much
+                    for me to learn. I want to become more confident
+                    in my abilities, improve my problem-solving skills
+                    and communicate my ideas clearly. Recognising these
+                    development areas gives me a clearer idea of where
+                    I should direct my effort.
+                </p>
+            </section>
+
+            <section id="future">
+                <h2>Looking ahead with <em>intention.</em></h2>
+
+                <p>
+                    My interest in data analysis and financial analysis
+                    gives me a direction to explore as I continue my
+                    studies. I am particularly interested in the banking
+                    and technology industries, where analytical thinking
+                    and information can support important decisions.
+                </p>
+
+                <p>
+                    To move towards these goals, I want to strengthen
+                    my technical knowledge, build practical experience,
+                    learn from feedback and gradually develop a portfolio
+                    that demonstrates what I can do. I also want to remain
+                    open to opportunities that may introduce me to new
+                    interests or career possibilities.
+                </p>
+
+                <p>
+                    Beyond my career, I want to build a life that reflects
+                    independence, continued learning and meaningful
+                    personal development. Success, to me, should involve
+                    not only reaching professional goals, but also
+                    becoming a person who is thoughtful, capable and
+                    confident in the choices she makes.
+                </p>
+            </section>
+
+            <section class="closing-thought">
+                <p class="eyebrow">My final reflection</p>
+
+                <h2>
+                    I am not finished.
+                    <em>I am becoming.</em>
+                </h2>
+
+                <p>
+                    This stage of my life reminds me that I do not need
+                    to have every part of my future figured out today.
+                    I need to remain curious, take responsibility for
+                    my learning and keep making thoughtful progress.
+                    Every lesson and experience can help me build a
+                    stronger foundation for the future I envision.
+                </p>
+            </section>
+
+            <div class="article-navigation">
+                <a class="button button-primary" href="group-reflection.html">
+                    Read my group reflection →
+                </a>
+
+                <a class="button button-secondary" href="skills-projects.html">
+                    Explore my skills &amp; projects
+                </a>
+
+                <a class="button button-secondary" href="index.html">
+                    Back to home
+                </a>
+            </div>
+
+        </article>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+
+        <div>
+            <a class="footer-brand" href="index.html">Thabile Khukhwane</a>
+            <p class="footer-note">
+                A personal portfolio shaped by curiosity and ambition.
+            </p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="individual-reflection.html">Reflection</a>
+            <a href="group-reflection.html">Group Work</a>
+            <a href="skills-projects.html">Skills &amp; Projects</a>
+            <a href="study-resources.html">Resources</a>
+        </nav>
+
+    </div>
+
+    <p class="copyright">
+        &copy; <span id="current-year">2026</span> Thabile Khukhwane.
+        Personal academic portfolio.
+    </p>
+</footer>
+
+<script>
+    const menuButton = document.querySelector(".nav-toggle");
+    const navigation = document.querySelector("#main-navigation");
+
+    menuButton.addEventListener("click", function () {
+        const isOpen = navigation.classList.toggle("is-open");
+
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+        menuButton.querySelector("span").textContent = isOpen ? "×" : "☰";
+    });
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            navigation.classList.remove("is-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation menu");
+            menuButton.querySelector("span").textContent = "☰";
+        });
+    });
+
+    document.querySelector("#current-year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
