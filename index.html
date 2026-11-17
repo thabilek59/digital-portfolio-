@@ -1,607 +1,1308 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Discover Thabile Khukhwane, a first-year Business Intelligence and Data Analytics student at Botswana Accountancy College, exploring her ambitions, interests and learning journey.">
+
     <meta name="author" content="Thabile Khukhwane">
-    <meta name="description"
-          content="Discover the world of a curious, ambitious and free-spirited Business Intelligence and Data Analytics student exploring business, technology, finance and personal growth.">
+    <meta name="theme-color" content="#211333">
 
-    <meta name="theme-color" content="#6D183B">
+    <title>Thabile Khukhwane | A World of Her Own</title>
 
-    <title>Her World | Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+          rel="stylesheet">
+
+    <!-- Temporary homepage styling.
+         This will later move into the shared style.css file. -->
+
+    <style>
+        :root {
+            --purple-deep: #211333;
+            --purple: #49315F;
+            --purple-light: #8F79A8;
+            --lilac: #E9DFF3;
+            --lilac-pale: #F7F3FA;
+            --silver: #C9C6D1;
+            --silver-dark: #888392;
+            --white: #FFFFFF;
+            --ink: #292331;
+            --muted: #77717F;
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            background: var(--lilac-pale);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--purple-light);
+            outline-offset: 5px;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            z-index: 1000;
+            padding: 12px 20px;
+            border: 1px solid var(--silver);
+            border-radius: 4px;
+            background: var(--purple-deep);
+            color: var(--white);
+            box-shadow: 0 8px 25px #21133335;
+            transform: translateY(-160%);
+            transition: transform 0.25s ease;
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        .site-header {
+            position: relative;
+            z-index: 10;
+            background: var(--lilac-pale);
+            border-bottom: 1px solid #49315F18;
+        }
+
+        .header-inner {
+            width: min(1280px, 90%);
+            min-height: 86px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .brand-mark {
+            width: 43px;
+            height: 43px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--purple-light);
+            border-radius: 50%;
+            color: var(--purple);
+            font-family: var(--serif);
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .brand-copy {
+            display: grid;
+            gap: 0;
+        }
+
+        .brand-copy strong {
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .brand-copy span {
+            color: var(--muted);
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .main-nav a {
+            color: #5C5366;
+            font-size: 11px;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .main-nav a:hover,
+        .main-nav a[aria-current="page"] {
+            color: var(--purple-light);
+        }
+
+        .nav-toggle {
+            display: none;
+            border: 1px solid var(--silver);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            background: transparent;
+            color: var(--purple-deep);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 85% 15%, #8F79A824, transparent 32%),
+                linear-gradient(125deg, #F7F3FA 0%, #EEE5F5 58%, #E6DCEC 100%);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 50px;
+            left: -130px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #8F79A825;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            right: 3%;
+            bottom: -170px;
+            width: 360px;
+            height: 360px;
+            border: 1px solid #8F79A829;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            width: min(1180px, 88%);
+            min-height: 690px;
+            margin: auto;
+            padding: 72px 0 90px;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 25px;
+            color: var(--purple);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 35px;
+            height: 1px;
+            background: var(--purple-light);
+        }
+
+        .hero h1 {
+            max-width: 660px;
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: clamp(50px, 6.2vw, 83px);
+            font-weight: 400;
+            letter-spacing: -2.7px;
+            line-height: 1.06;
+        }
+
+        .hero h1 em {
+            display: block;
+            color: var(--purple-light);
+            font-weight: 400;
+        }
+
+        .hero-intro {
+            max-width: 460px;
+            margin-top: 28px;
+            color: #655C6E;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 34px;
+        }
+
+        .button {
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 12px 22px;
+            border: 1px solid transparent;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            transition: all 0.25s ease;
+        }
+
+        .button-primary {
+            background: var(--purple-deep);
+            color: var(--white);
+        }
+
+        .button-primary:hover {
+            background: var(--purple);
+            transform: translateY(-2px);
+        }
+
+        .button-text {
+            border-bottom-color: var(--silver-dark);
+            color: var(--purple-deep);
+        }
+
+        .button-text:hover {
+            border-bottom-color: var(--purple);
+            color: var(--purple-light);
+        }
+
+        .hero-note {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 48px;
+            color: var(--muted);
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .hero-note span {
+            color: var(--purple-light);
+            font-size: 17px;
+        }
+
+        .portrait-stage {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            justify-self: center;
+            padding: 25px 25px 40px;
+        }
+
+        .portrait-frame {
+            position: relative;
+            z-index: 1;
+            min-height: 440px;
+            overflow: hidden;
+            border: 1px solid #FFFFFFB5;
+            background: linear-gradient(145deg, #D8C9E4, #B4A0C8);
+            box-shadow: 0 25px 70px #21133320;
+        }
+
+        .portrait-frame img {
+            width: 100%;
+            height: 510px;
+            object-fit: cover;
+            object-position: center top;
+            filter: saturate(0.88);
+        }
+
+        .portrait-placeholder {
+            min-height: 440px;
+            padding: 30px;
+            display: none;
+            align-content: center;
+            justify-items: center;
+            gap: 14px;
+            text-align: center;
+            color: var(--purple-deep);
+        }
+
+        .portrait-placeholder .placeholder-monogram {
+            width: 110px;
+            height: 110px;
+            display: grid;
+            place-items: center;
+            border: 1px solid #FFFFFF;
+            border-radius: 50%;
+            font-family: var(--serif);
+            font-size: 45px;
+            font-style: italic;
+        }
+
+        .portrait-placeholder p {
+            max-width: 240px;
+            font-size: 12px;
+        }
+
+        .portrait-frame.image-missing img {
+            display: none;
+        }
+
+        .portrait-frame.image-missing .portrait-placeholder {
+            display: grid;
+        }
+
+        .portrait-border {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 60px;
+            left: 0;
+            border: 1px solid var(--purple-light);
+            transform: translate(13px, 13px);
+            pointer-events: none;
+        }
+
+        .portrait-caption {
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            bottom: 3px;
+            width: min(300px, 90%);
+            padding: 20px 23px;
+            border: 1px solid #FFFFFF;
+            background: #FFFFFFF2;
+            box-shadow: 0 12px 35px #21133312;
+        }
+
+        .portrait-caption span {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--purple-light);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .portrait-caption strong {
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: 21px;
+            font-weight: 400;
+        }
+
+        .portrait-caption p {
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 10px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-inner {
+            width: min(1120px, 88%);
+            margin: auto;
+        }
+
+        .section-heading {
+            max-width: 680px;
+            margin-bottom: 48px;
+        }
+
+        .section-heading .eyebrow {
+            margin-bottom: 17px;
+        }
+
+        .section-heading h2 {
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: clamp(35px, 4.4vw, 55px);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .section-heading h2 em {
+            color: var(--purple-light);
+        }
+
+        .section-heading p {
+            max-width: 600px;
+            margin-top: 16px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .intro-section {
+            background: var(--white);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 85px;
+            align-items: start;
+        }
+
+        .intro-label {
+            padding-top: 8px;
+            color: var(--purple-light);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .intro-copy h2 {
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: clamp(32px, 4vw, 47px);
+            font-weight: 400;
+            line-height: 1.28;
+        }
+
+        .intro-copy h2 em {
+            color: var(--purple-light);
+        }
+
+        .intro-copy p {
+            margin-top: 22px;
+            color: #706978;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .intro-signature {
+            margin-top: 27px;
+            color: var(--purple);
+            font-family: var(--serif);
+            font-size: 23px;
+            font-style: italic;
+        }
+
+        .interests-section {
+            background: var(--purple-deep);
+            color: var(--white);
+        }
+
+        .interests-section .section-heading h2 {
+            color: var(--white);
+        }
+
+        .interests-section .section-heading h2 em {
+            color: #C7B3DF;
+        }
+
+        .interests-section .section-heading p {
+            color: #D0C6DB;
+        }
+
+        .interests-section .eyebrow {
+            color: #C7B3DF;
+        }
+
+        .interests-section .eyebrow::before {
+            background: #C7B3DF;
+        }
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid #FFFFFF30;
+            border-bottom: 1px solid #FFFFFF30;
+        }
+
+        .interest-item {
+            min-height: 245px;
+            padding: 32px 28px;
+            border-right: 1px solid #FFFFFF30;
+        }
+
+        .interest-item:last-child {
+            border-right: 0;
+        }
+
+        .interest-number {
+            color: #C7B3DF;
+            font-family: var(--serif);
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        .interest-item h3 {
+            margin-top: 32px;
+            color: var(--white);
+            font-family: var(--serif);
+            font-size: 26px;
+            font-weight: 400;
+        }
+
+        .interest-item p {
+            margin-top: 12px;
+            color: #D0C6DB;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .journey-section {
+            background: var(--lilac-pale);
+        }
+
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .journey-card {
+            padding: 30px;
+            border: 1px solid #D9D0E2;
+            background: #FFFFFFB8;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .journey-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 35px #2113330C;
+        }
+
+        .journey-card span {
+            color: var(--purple-light);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .journey-card h3 {
+            margin-top: 14px;
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        .journey-card p {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .journey-card a {
+            display: inline-block;
+            margin-top: 21px;
+            border-bottom: 1px solid var(--silver-dark);
+            color: var(--purple);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .journey-card a:hover {
+            color: var(--purple-light);
+        }
+
+        .closing-section {
+            padding: 80px 0;
+            background: linear-gradient(120deg, #E6DCEC, #F7F3FA);
+        }
+
+        .closing-inner {
+            width: min(900px, 88%);
+            margin: auto;
+            text-align: center;
+        }
+
+        .closing-inner .eyebrow {
+            justify-content: center;
+        }
+
+        .closing-inner h2 {
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: clamp(36px, 5vw, 60px);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .closing-inner h2 em {
+            color: var(--purple-light);
+        }
+
+        .closing-inner p {
+            max-width: 550px;
+            margin: 20px auto 28px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .closing-inner .button {
+            margin: 4px;
+        }
+
+        .site-footer {
+            padding: 30px 6%;
+            background: #170D23;
+            color: #C8BECE;
+        }
+
+        .footer-inner {
+            width: min(1180px, 100%);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: var(--white);
+            font-family: var(--serif);
+            font-size: 17px;
+        }
+
+        .footer-note {
+            margin-top: 5px;
+            color: #B2A6BD;
+            font-size: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 17px;
+        }
+
+        .footer-links a {
+            color: #D3C8DE;
+            font-size: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid #FFFFFF20;
+            color: #A99BB5;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 1000px) {
+            .header-inner {
+                width: 92%;
+            }
+
+            .main-nav {
+                gap: 13px;
+            }
+
+            .main-nav a {
+                font-size: 10px;
+            }
+
+            .hero-inner {
+                gap: 35px;
+            }
+
+            .hero h1 {
+                font-size: clamp(48px, 6vw, 68px);
+            }
+
+            .portrait-frame img {
+                height: 450px;
+            }
+
+            .intro-grid {
+                gap: 45px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .header-inner {
+                min-height: 75px;
+            }
+
+            .nav-toggle {
+                display: grid;
+                place-items: center;
+            }
+
+            .main-nav {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0;
+                display: none;
+                padding: 18px 6% 25px;
+                border-bottom: 1px solid var(--silver);
+                background: var(--lilac-pale);
+                box-shadow: 0 15px 25px #2113330B;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .main-nav.is-open {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .main-nav a {
+                padding: 12px 0;
+                border-bottom: 1px solid #49315F12;
+                font-size: 12px;
+            }
+
+            .hero-inner {
+                min-height: auto;
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 65px 0 70px;
+            }
+
+            .hero-copy {
+                text-align: center;
+            }
+
+            .hero-copy .eyebrow,
+            .hero-actions,
+            .hero-note {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                margin: auto;
+                font-size: clamp(49px, 12vw, 75px);
+            }
+
+            .hero-intro {
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .hero-note {
+                margin-top: 30px;
+            }
+
+            .portrait-stage {
+                width: min(390px, 92%);
+                padding: 18px 18px 38px;
+            }
+
+            .portrait-frame img {
+                height: 440px;
+            }
+
+            .portrait-frame {
+                min-height: 380px;
+            }
+
+            .portrait-border {
+                bottom: 52px;
+            }
+
+            .section {
+                padding: 72px 0;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .intro-label {
+                padding-top: 0;
+            }
+
+            .interest-grid,
+            .journey-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interest-item {
+                min-height: auto;
+                padding: 28px 8px;
+                border-right: 0;
+                border-bottom: 1px solid #FFFFFF30;
+            }
+
+            .interest-item:last-child {
+                border-bottom: 0;
+            }
+
+            .interest-item h3 {
+                margin-top: 15px;
+            }
+
+            .journey-card {
+                padding: 25px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-links {
+                gap: 13px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .brand-copy strong {
+                font-size: 14px;
+            }
+
+            .brand-copy span {
+                font-size: 8px;
+                letter-spacing: 1.5px;
+            }
+
+            .brand-mark {
+                width: 38px;
+                height: 38px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.7px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .portrait-frame img {
+                height: 370px;
+            }
+
+            .portrait-caption {
+                padding: 15px 17px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+
+        @media print {
+            .site-header,
+            .hero-actions,
+            .site-footer,
+            .closing-section,
+            .skip-link {
+                display: none !important;
+            }
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .hero,
+            .interests-section,
+            .journey-section,
+            .intro-section {
+                background: white !important;
+                color: black !important;
+            }
+
+            .hero-inner,
+            .section {
+                min-height: auto;
+                padding: 25px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- ACCESSIBILITY -->
-    <a href="#main-content" class="skip-link">
-        Skip to main content
+    <a class="skip-link" href="#main-content">
+        Skip to main content <span aria-hidden="true">↘</span>
     </a>
 
-    <!-- MINIMAL HEADER: NO NAME OR LOGO -->
     <header class="site-header">
+        <div class="header-inner">
 
-        <p class="header-note">
-            A PERSONAL SPACE FOR GROWTH & AMBITION
-        </p>
+            <a class="brand" href="index.html" aria-label="Thabile Khukhwane home">
+                <span class="brand-mark" aria-hidden="true">T</span>
 
-        <button
-            class="menu-toggle"
-            id="menu-toggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="main-navigation">
+                <span class="brand-copy">
+                    <strong>Thabile Khukhwane</strong>
+                    <span>Personal Portfolio</span>
+                </span>
+            </a>
 
-            <span></span>
-            <span></span>
-        </button>
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="main-navigation"
+                aria-expanded="false">
+                <span aria-hidden="true">☰</span>
+            </button>
 
-        <nav class="main-navigation" id="main-navigation"
-             aria-label="Main navigation">
+            <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="cv.html">My CV</a>
+                <a href="individual-reflection.html">My Reflection</a>
+                <a href="group-reflection.html">Group Reflection</a>
+                <a href="skills-projects.html">Skills &amp; Projects</a>
+                <a href="application-letter.html">Application Letter</a>
+                <a href="email-template.html">Email Template</a>
+                <a href="study-resources.html">Study Resources</a>
+            </nav>
 
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="about.html">My Story</a>
-            <a href="cv.html">My CV</a>
-            <a href="skills.html">My Skills</a>
-            <a href="projects.html">My Academic World</a>
-            <a href="reflections.html">My Reflections</a>
-            <a href="career-goals.html">My Ambitions</a>
-            <a href="contact.html">Let's Connect</a>
-
-        </nav>
-
+        </div>
     </header>
-
 
     <main id="main-content">
 
-        <!-- HERO: THE FIRST IMPRESSION -->
-        <section class="hero-section">
+        <!-- HERO: PERSONAL INTRODUCTION -->
 
-            <div class="hero-decoration hero-decoration-one"
-                 aria-hidden="true">✳</div>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-inner">
 
-            <div class="hero-decoration hero-decoration-two"
-                 aria-hidden="true">✧</div>
+                <div class="hero-copy">
 
-            <div class="hero-content">
+                    <p class="eyebrow">A student. A dreamer. A woman in progress.</p>
 
-                <p class="hero-eyebrow">
-                    <span class="eyebrow-line"></span>
-                    HER WORLD. HER RULES.
-                    <span class="eyebrow-line"></span>
-                </p>
+                    <h1 id="hero-title">
+                        A world
+                        <em>of my own.</em>
+                    </h1>
 
-                <h1 class="hero-title">
-                    A little wild.
-                    <span class="title-italic">A lot ambitious.</span>
-                    Entirely my own.
-                </h1>
+                    <p class="hero-intro">
+                        Curious by nature. Ambitious by choice. I am building
+                        my future one experience, one lesson and one bold
+                        decision at a time.
+                    </p>
 
-                <p class="hero-description">
-                    A free spirit with a curious mind, big dreams
-                    and a future I'm building on my own terms.
-                    Welcome to my little corner of the world.
-                </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#my-story">
+                            Discover my story <span aria-hidden="true">↗</span>
+                        </a>
 
-                <a href="#meet-me" class="button button-primary">
-                    STEP INTO MY WORLD
-                    <span aria-hidden="true">↗</span>
-                </a>
+                        <a class="button button-text" href="cv.html">
+                            Explore my CV <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
 
-                <p class="hero-caption">
-                    GROWING THROUGH EVERY SEASON OF LIFE
-                </p>
-
-            </div>
-
-            <div class="hero-image-wrapper">
-
-                <div class="hero-image-frame">
-
-                    <img
-                        src="images/thabile-portrait.jpg"
-                        alt="Portrait of Thabile Khukhwane"
-                        class="hero-image"
-                    >
+                    <p class="hero-note">
+                        <span aria-hidden="true">✦</span>
+                        FIRST YEAR · BUSINESS INTELLIGENCE &amp; DATA ANALYTICS
+                    </p>
 
                 </div>
 
-                <div class="image-sticker sticker-top">
-                    <span aria-hidden="true">✧</span>
-                    A work in progress,
-                    <strong>always becoming.</strong>
-                </div>
+                <div class="portrait-stage">
 
-                <div class="image-sticker sticker-bottom">
-                    <span aria-hidden="true">♡</span>
-                    Dream boldly.
-                    Live freely.
+                    <div class="portrait-border" aria-hidden="true"></div>
+
+                    <div class="portrait-frame" id="portrait-frame">
+
+                        <img
+                            src="images/thabile-portrait.jpg"
+                            alt="Portrait of Thabile Khukhwane"
+                            onerror="this.parentElement.classList.add('image-missing')">
+
+                        <div class="portrait-placeholder">
+                            <div class="placeholder-monogram" aria-hidden="true">T</div>
+                            <p>
+                                Add Thabile's portrait to
+                                <strong>images/thabile-portrait.jpg</strong>
+                                to display her photograph here.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="portrait-caption">
+                        <span>Meet the woman behind the vision</span>
+                        <strong>Thabile Khukhwane</strong>
+                        <p>Learning, becoming and creating my own path.</p>
+                    </div>
+
                 </div>
 
             </div>
-
-            <div class="hero-bottom-note">
-                <span>BUSINESS</span>
-                <span class="note-divider">✳</span>
-                <span>TECHNOLOGY</span>
-                <span class="note-divider">✳</span>
-                <span>FINANCE</span>
-                <span class="note-divider">✳</span>
-                <span>PERSONAL GROWTH</span>
-            </div>
-
         </section>
 
 
-        <!-- PERSONAL INTRODUCTION -->
-        <section class="meet-section section-padding" id="meet-me">
+        <!-- ABOUT THABILE -->
 
-            <div class="section-label">
-                <span>01</span>
-                <span>A LITTLE INTRODUCTION</span>
-            </div>
+        <section class="section intro-section" id="my-story"
+                 aria-labelledby="story-title">
 
-            <div class="meet-grid">
+            <div class="section-inner intro-grid">
 
-                <div class="meet-heading">
+                <div class="intro-label">
+                    <span>01 / A little about me</span>
+                </div>
 
-                    <p class="small-overline">
-                        SO, WHO'S THE GIRL?
-                    </p>
+                <div class="intro-copy">
 
-                    <h2>
-                        Meet the mind
-                        <span class="text-italic">
-                            behind the dreams.
-                        </span>
+                    <h2 id="story-title">
+                        More than a student.
+                        <em>Always becoming.</em>
                     </h2>
 
-                    <div class="decorative-star" aria-hidden="true">
-                        ✳
-                    </div>
-
-                </div>
-
-                <div class="meet-copy">
-
-                    <p class="meet-name">
-                        My name is
-                        <strong>Thabile Khukhwane.</strong>
+                    <p>
+                        My name is Thabile Khukhwane, and I am a first-year
+                        Business Intelligence and Data Analytics student
+                        at Botswana Accountancy College.
                     </p>
 
                     <p>
-                        I am a first-year Bachelor of Science in
-                        Business Intelligence and Data Analytics
-                        student at Botswana Accountancy College.
+                        I am a curious and ambitious person who enjoys
+                        exploring new ideas, learning useful skills and
+                        discovering how the world works. I am especially
+                        interested in the relationship between business,
+                        technology, finance and data.
                     </p>
 
                     <p>
-                        I would describe myself as curious,
-                        ambitious, free-spirited and independent-minded.
-                        I have a genuine love for learning, exploring
-                        new ideas and discovering the possibilities
-                        that exist beyond what I already know.
+                        I believe that growth happens when I remain open
+                        to learning, challenge myself to improve and
+                        approach new experiences with an independent mind.
+                        I am still discovering everything I can become,
+                        and that is part of what makes this journey exciting.
                     </p>
 
-                    <p>
-                        I believe that becoming the person I aspire
-                        to be is a journey of its own. Every lesson,
-                        challenge and new experience gives me another
-                        opportunity to learn, grow and do better.
-                    </p>
-
-                    <a href="about.html" class="text-link">
-                        GET TO KNOW ME
-                        <span aria-hidden="true">↗</span>
-                    </a>
+                    <div class="intro-signature">Growing with intention.</div>
 
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- PERSONAL PHILOSOPHY -->
-        <section class="manifesto-section section-padding">
+        <!-- PERSONAL INTERESTS -->
 
-            <div class="manifesto-decoration"
-                 aria-hidden="true">✧</div>
+        <section class="section interests-section"
+                 aria-labelledby="interests-title">
 
-            <p class="manifesto-label">
-                A LITTLE REMINDER TO MYSELF
-            </p>
+            <div class="section-inner">
 
-            <blockquote class="manifesto-quote">
-                I can be soft and still be powerful.
-                I can be free-spirited and still be focused.
-                I can dream beautifully and work relentlessly
-                to make those dreams my reality.
-            </blockquote>
+                <div class="section-heading">
 
-            <p class="manifesto-signature">
-                Living, learning & becoming.
-            </p>
+                    <p class="eyebrow">Beyond the classroom</p>
 
-        </section>
-
-
-        <!-- ACADEMIC INTERESTS -->
-        <section class="interests-section section-padding">
-
-            <div class="section-label">
-                <span>02</span>
-                <span>THINGS THAT LIGHT UP MY MIND</span>
-            </div>
-
-            <div class="interests-intro">
-
-                <h2>
-                    Pretty dreams.
-                    <span class="text-italic">Powerful ideas.</span>
-                </h2>
-
-                <p>
-                    I love exploring ideas that challenge me
-                    intellectually and open my mind to new
-                    opportunities.
-                </p>
-
-            </div>
-
-            <div class="interest-cards">
-
-                <article class="interest-card">
-
-                    <div class="interest-card-top">
-                        <span>01 / THE WORLD OF BUSINESS</span>
-                        <span class="interest-symbol"
-                              aria-hidden="true">↗</span>
-                    </div>
-
-                    <h3>Business & Strategy</h3>
+                    <h2 id="interests-title">
+                        The things that make me
+                        <em>who I am.</em>
+                    </h2>
 
                     <p>
-                        Understanding how businesses operate,
-                        make decisions, create value and turn
-                        ideas into opportunities.
+                        My interests reflect a balance between analytical
+                        thinking, personal development and the freedom
+                        to explore the world around me.
                     </p>
 
-                    <a href="about.html" class="card-link">
-                        EXPLORE MY INTERESTS ↗
-                    </a>
-
-                </article>
-
-
-                <article class="interest-card interest-card-featured">
-
-                    <div class="interest-card-top">
-                        <span>02 / THE POWER OF DATA</span>
-                        <span class="interest-symbol"
-                              aria-hidden="true">⌘</span>
-                    </div>
-
-                    <h3>Technology & Analytics</h3>
-
-                    <p>
-                        Exploring data, digital innovation and
-                        the ways technology can transform
-                        information into meaningful insight.
-                    </p>
-
-                    <a href="skills.html" class="card-link">
-                        DISCOVER MY SKILLS ↗
-                    </a>
-
-                </article>
-
-
-                <article class="interest-card">
-
-                    <div class="interest-card-top">
-                        <span>03 / NUMBERS WITH PURPOSE</span>
-                        <span class="interest-symbol"
-                              aria-hidden="true">∑</span>
-                    </div>
-
-                    <h3>Finance & Mathematics</h3>
-
-                    <p>
-                        Developing my numerical reasoning,
-                        problem-solving abilities and interest
-                        in financial systems and analysis.
-                    </p>
-
-                    <a href="career-goals.html" class="card-link">
-                        EXPLORE MY FUTURE ↗
-                    </a>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- CAREER AMBITIONS -->
-        <section class="ambition-section section-padding">
-
-            <div class="ambition-content">
-
-                <p class="ambition-label">
-                    03 / THE WOMAN I'M BECOMING
-                </p>
-
-                <h2>
-                    Independent mind.
-                    <span class="text-italic">International dreams.</span>
-                    A future of my own.
-                </h2>
-
-                <p>
-                    I aspire to build a successful, financially
-                    independent career in business and technology.
-                    I want to keep learning, gain international
-                    exposure, challenge myself professionally and
-                    create opportunities for lasting growth.
-                </p>
-
-                <p>
-                    My interests lead me towards the worlds of
-                    data analysis, financial analysis, banking
-                    and technology. I am excited to discover
-                    where my education and experiences will take me.
-                </p>
-
-                <a href="career-goals.html"
-                   class="button button-light">
-                    EXPLORE MY AMBITIONS
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-            </div>
-
-            <div class="ambition-aside">
-
-                <div class="ambition-item">
-                    <span>01</span>
-                    <div>
-                        <h3>Financial Independence</h3>
-                        <p>
-                            Building a career that creates
-                            stability and freedom.
-                        </p>
-                    </div>
                 </div>
 
-                <div class="ambition-item">
-                    <span>02</span>
-                    <div>
-                        <h3>Global Exposure</h3>
-                        <p>
-                            Learning from opportunities,
-                            people and experiences worldwide.
-                        </p>
-                    </div>
-                </div>
+                <div class="interest-grid">
 
-                <div class="ambition-item">
-                    <span>03</span>
-                    <div>
-                        <h3>Continuous Growth</h3>
-                        <p>
-                            Becoming more knowledgeable,
-                            capable and confident.
-                        </p>
-                    </div>
-                </div>
+                    <article class="interest-item">
+                        <span class="interest-number">01 / Curiosity</span>
 
-            </div>
-
-        </section>
-
-
-        <!-- LIFE OUTSIDE ACADEMICS -->
-        <section class="beyond-section section-padding">
-
-            <div class="section-label">
-                <span>04</span>
-                <span>LIFE OUTSIDE THE CLASSROOM</span>
-            </div>
-
-            <div class="beyond-intro">
-
-                <h2>
-                    A mind that
-                    <span class="text-italic">wanders.</span>
-                    A soul that grows.
-                </h2>
-
-                <p>
-                    There is more to life than qualifications
-                    and career plans. I value the experiences,
-                    interests and little discoveries that help
-                    me see the world differently.
-                </p>
-
-            </div>
-
-            <div class="beyond-grid">
-
-                <article class="beyond-card nature-card">
-
-                    <span class="beyond-number">01</span>
-
-                    <div class="beyond-card-content">
-                        <span class="beyond-category">
-                            THE NATURAL WORLD
-                        </span>
-
-                        <h3>Nature & Wildlife</h3>
+                        <h3>Business &amp; Technology</h3>
 
                         <p>
-                            Appreciating the beauty of nature,
-                            the diversity of wildlife and the
-                            world beyond everyday routines.
+                            Exploring how businesses operate, how technology
+                            changes our lives and how information can help
+                            people make better decisions.
                         </p>
-                    </div>
+                    </article>
 
-                </article>
+                    <article class="interest-item">
+                        <span class="interest-number">02 / Discovery</span>
 
+                        <h3>Nature &amp; Wildlife</h3>
 
-                <article class="beyond-card growth-card">
+                        <p>
+                            Appreciating nature, wildlife and the opportunity
+                            to discover more about the world beyond familiar
+                            surroundings.
+                        </p>
+                    </article>
 
-                    <span class="beyond-number">02</span>
-
-                    <div class="beyond-card-content">
-                        <span class="beyond-category">
-                            THE INNER WORLD
-                        </span>
+                    <article class="interest-item">
+                        <span class="interest-number">03 / Becoming</span>
 
                         <h3>Personal Growth</h3>
 
                         <p>
-                            Learning about myself, developing
-                            new perspectives and continuously
-                            working towards a better version of me.
+                            Developing my mindset, strengthening my abilities
+                            and working towards a future built on confidence,
+                            independence and continuous learning.
                         </p>
-                    </div>
+                    </article>
 
-                </article>
-
-
-                <article class="beyond-card innovation-card">
-
-                    <span class="beyond-number">03</span>
-
-                    <div class="beyond-card-content">
-                        <span class="beyond-category">
-                            THE WORLD AHEAD
-                        </span>
-
-                        <h3>Innovation & Discovery</h3>
-
-                        <p>
-                            Exploring new ideas, emerging
-                            technologies and the possibilities
-                            that tomorrow can bring.
-                        </p>
-                    </div>
-
-                </article>
+                </div>
 
             </div>
-
         </section>
 
 
-        <!-- ACADEMIC COLLABORATION GALLERY -->
-        <section class="gallery-section section-padding">
+        <!-- EDUCATION AND AMBITION -->
 
-            <div class="section-label">
-                <span>05</span>
-                <span>MY JOURNEY SO FAR</span>
+        <section class="section journey-section"
+                 aria-labelledby="journey-title">
+
+            <div class="section-inner">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">Where I am going</p>
+
+                    <h2 id="journey-title">
+                        A journey with
+                        <em>purpose.</em>
+                    </h2>
+
+                    <p>
+                        Every stage of my education contributes to the
+                        person and professional I am working towards becoming.
+                    </p>
+
+                </div>
+
+                <div class="journey-grid">
+
+                    <article class="journey-card">
+                        <span>My foundation</span>
+
+                        <h3>Where I began</h3>
+
+                        <p>
+                            My educational journey began at Acacia Primary
+                            School and continued at Rainbow High School,
+                            where I developed foundational knowledge and
+                            took on responsibilities as a class monitor
+                            and school prefect.
+                        </p>
+                    </article>
+
+                    <article class="journey-card">
+                        <span>My present</span>
+
+                        <h3>Learning at BAC</h3>
+
+                        <p>
+                            I am currently pursuing Business Intelligence
+                            and Data Analytics at Botswana Accountancy
+                            College, building my understanding of data,
+                            business and technology.
+                        </p>
+                        <a href="skills-projects.html">
+                            Explore my skills and projects →
+                        </a>
+                    </article>
+
+                    <article class="journey-card">
+                        <span>My vision</span>
+
+                        <h3>Building my future</h3>
+
+                        <p>
+                            I am interested in a future as a data analyst
+                            or financial analyst, particularly in banking
+                            or technology. My broader ambition is to build
+                            a meaningful career and achieve financial
+                            independence.
+                        </p>
+                        <a href="cv.html">View my CV →</a>
+                    </article>
+
+                </div>
+
             </div>
+        </section>
 
-            <div class="gallery-intro">
 
-                <h2>
-                    Learning together.
-                    <span class="text-italic">Growing together.</span>
+        <!-- CLOSING STATEMENT -->
+
+        <section class="closing-section" aria-labelledby="closing-title">
+
+            <div class="closing-inner">
+
+                <p class="eyebrow">This is only the beginning</p>
+
+                <h2 id="closing-title">
+                    My future is a story
+                    <em>I'm still writing.</em>
                 </h2>
 
                 <p>
-                    My academic journey is also shaped by
-                    collaboration, shared ideas, preparation
-                    and the experience of presenting work
-                    alongside my classmates.
+                    This portfolio brings together my academic journey,
+                    personal reflections, developing skills and professional
+                    aspirations. Each page offers another perspective on
+                    who I am and where I hope to go.
                 </p>
 
-            </div>
+                <a class="button button-primary" href="individual-reflection.html">
+                    Read my reflection <span aria-hidden="true">↗</span>
+                </a>
 
-            <div class="gallery-grid">
-
-                <figure class="gallery-item gallery-item-large">
-
-                    <img
-                        src="images/group-preparation.jpg"
-                        alt="Thabile and her classmates preparing together for a group assignment"
-                        loading="lazy"
-                    >
-
-                    <figcaption>
-                        <span>BEHIND THE SCENES</span>
-                        <h3>Every good presentation starts with preparation.</h3>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-item">
-
-                    <img
-                        src="images/group-presentation.jpg"
-                        alt="Thabile and her group members during their class presentation"
-                        loading="lazy"
-                    >
-
-                    <figcaption>
-                        <span>THE CLASSROOM EXPERIENCE</span>
-                        <h3>Ideas shared. Lessons gained.</h3>
-                    </figcaption>
-
-                </figure>
+                <a class="button button-text" href="group-reflection.html">
+                    My group experience <span aria-hidden="true">→</span>
+                </a>
 
             </div>
-
-            <p class="gallery-note">
-                <span aria-hidden="true">✳</span>
-                Learning is a journey, and every experience
-                has something to teach me.
-            </p>
-
-            <a href="projects.html" class="text-link">
-                EXPLORE MY ACADEMIC WORK
-                <span aria-hidden="true">↗</span>
-            </a>
-
-        </section>
-
-
-        <!-- CLOSING SECTION -->
-        <section class="closing-section section-padding">
-
-            <p class="closing-overline">
-                AND THIS IS JUST THE BEGINNING...
-            </p>
-
-            <h2>
-                The world is wide.
-                <span class="text-italic">So are my dreams.</span>
-            </h2>
-
-            <p class="closing-description">
-                I am here to learn, to explore, to grow
-                and to create a future that reflects
-                everything I am becoming.
-            </p>
-
-            <a href="about.html" class="button button-primary">
-                GET TO KNOW MY STORY
-                <span aria-hidden="true">↗</span>
-            </a>
-
-            <div class="closing-decoration"
-                 aria-hidden="true">✧</div>
 
         </section>
 
@@ -609,82 +1310,68 @@
 
 
     <!-- FOOTER -->
+
     <footer class="site-footer">
 
-        <div class="footer-top">
+        <div class="footer-inner">
 
-            <div class="footer-message">
-                <p class="footer-overline">
-                    A LITTLE SPACE ON THE INTERNET
-                </p>
+            <div>
+                <a class="footer-brand" href="index.html">
+                    Thabile Khukhwane
+                </a>
 
-                <p class="footer-quote">
-                    Made of dreams, curiosity and a
-                    little bit of magic.
+                <p class="footer-note">
+                    A personal portfolio shaped by curiosity and ambition.
                 </p>
             </div>
 
-            <div class="footer-links">
-
-                <a href="about.html">My Story</a>
-                <a href="cv.html">My CV</a>
-                <a href="skills.html">My Skills</a>
-                <a href="projects.html">Academic Work</a>
-                <a href="career-goals.html">Career Goals</a>
-                <a href="contact.html">Contact</a>
-
-            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="individual-reflection.html">Reflection</a>
+                <a href="group-reflection.html">Group Work</a>
+                <a href="skills-projects.html">Skills &amp; Projects</a>
+                <a href="study-resources.html">Resources</a>
+            </nav>
 
         </div>
 
-        <div class="footer-bottom">
-
-            <p>
-                © <span id="current-year">2026</span>
-                Thabile Khukhwane
-            </p>
-
-            <p>
-                Growing into my own, one day at a time.
-            </p>
-
-            <a href="#main-content" class="back-to-top">
-                BACK TO TOP ↑
-            </a>
-
-        </div>
+        <p class="copyright">
+            &copy; <span id="current-year">2026</span> Thabile Khukhwane.
+            Personal academic portfolio.
+        </p>
 
     </footer>
 
 
-    <!-- MOBILE NAVIGATION -->
     <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const mainNavigation = document.getElementById("main-navigation");
+        const menuButton = document.querySelector(".nav-toggle");
+        const navigation = document.querySelector("#main-navigation");
 
-        menuToggle.addEventListener("click", function () {
-            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuButton.addEventListener("click", function () {
+            const isOpen = navigation.classList.toggle("is-open");
 
-            menuToggle.setAttribute("aria-expanded", String(!isOpen));
-            menuToggle.setAttribute(
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+
+            menuButton.setAttribute(
                 "aria-label",
-                isOpen ? "Open navigation menu" : "Close navigation menu"
+                isOpen ? "Close navigation menu" : "Open navigation menu"
             );
 
-            mainNavigation.classList.toggle("navigation-open", !isOpen);
-            document.body.classList.toggle("menu-open", !isOpen);
+            menuButton.querySelector("span").textContent =
+                isOpen ? "×" : "☰";
         });
 
-        mainNavigation.querySelectorAll("a").forEach(function (link) {
+        navigation.querySelectorAll("a").forEach(function (link) {
             link.addEventListener("click", function () {
-                menuToggle.setAttribute("aria-expanded", "false");
-                menuToggle.setAttribute("aria-label", "Open navigation menu");
-                mainNavigation.classList.remove("navigation-open");
-                document.body.classList.remove("menu-open");
+                navigation.classList.remove("is-open");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute("aria-label", "Open navigation menu");
+                menuButton.querySelector("span").textContent = "☰";
             });
         });
 
-        document.getElementById("current-year").textContent =
+        document.querySelector("#current-year").textContent =
             new Date().getFullYear();
     </script>
 
