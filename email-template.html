@@ -1,0 +1,1068 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional email writing template and communication guidelines in Thabile Khukhwane's digital academic portfolio.">
+    <meta name="author" content="Thabile Khukhwane">
+    <title>Email Template | Thabile Khukhwane</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --purple: #35204f;
+            --deep-purple: #241334;
+            --lilac: #eee7f7;
+            --light-lilac: #f8f5fc;
+            --silver: #c8c2d2;
+            --ink: #30283a;
+            --muted: #777080;
+            --white: #ffffff;
+            --border: #e8e1ef;
+            --shadow: 0 20px 55px rgba(45, 25, 67, 0.09);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #faf8fc;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #a98bdb;
+            outline-offset: 4px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 12px;
+            top: -100px;
+            z-index: 1000;
+            background: white;
+            color: var(--purple);
+            padding: 12px 18px;
+            border-radius: 8px;
+        }
+
+        .skip-link:focus {
+            top: 12px;
+        }
+
+        .top-line {
+            height: 5px;
+            background: linear-gradient(90deg, #241334, #805da7, #d3c5e6, #805da7, #241334);
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-wrap {
+            max-width: 1240px;
+            margin: auto;
+            padding: 17px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.25;
+            flex-shrink: 0;
+        }
+
+        .brand strong {
+            color: var(--purple);
+            font-family: "Playfair Display", serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .brand span {
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--purple);
+            padding: 9px 13px;
+            border-radius: 8px;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        nav a {
+            display: block;
+            color: #655b70;
+            font-size: 0.77rem;
+            padding: 8px 10px;
+            border-radius: 7px;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a[aria-current="page"] {
+            background: var(--lilac);
+            color: var(--purple);
+        }
+
+        .hero {
+            background:
+                radial-gradient(circle at 85% 20%, rgba(190, 164, 224, 0.25), transparent 27%),
+                linear-gradient(125deg, #251536, #48305f 64%, #604a78);
+            color: white;
+            padding: 75px 7% 85px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "07";
+            position: absolute;
+            right: 5%;
+            bottom: -68px;
+            color: rgba(255, 255, 255, 0.055);
+            font-family: "Playfair Display", serif;
+            font-size: clamp(12rem, 30vw, 24rem);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            color: #dfd2f1;
+            font-size: 0.73rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 35px;
+            background: #c9b4e8;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .hero h1 {
+            max-width: 790px;
+            margin: 23px 0 18px;
+            font-size: clamp(2.7rem, 6.5vw, 5.1rem);
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 em {
+            color: #d9c7f2;
+            font-weight: 400;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #e0d8e9;
+            font-size: 1rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .hero-meta span {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 30px;
+            padding: 7px 13px;
+            color: #f0eaf7;
+            font-size: 0.77rem;
+        }
+
+        main {
+            max-width: 1180px;
+            margin: auto;
+            padding: 65px 5% 90px;
+        }
+
+        .section-heading {
+            margin-bottom: 35px;
+        }
+
+        .section-heading .eyebrow {
+            color: #80649f;
+        }
+
+        .section-heading h2 {
+            color: var(--purple);
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-top: 12px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            max-width: 680px;
+            margin-top: 12px;
+        }
+
+        .email-layout {
+            display: grid;
+            grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.7fr);
+            gap: 30px;
+            align-items: start;
+        }
+
+        .sidebar {
+            display: grid;
+            gap: 18px;
+        }
+
+        .info-card {
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 10px 28px rgba(45, 25, 67, 0.035);
+        }
+
+        .small-label {
+            display: block;
+            color: #8b76a4;
+            font-size: 0.69rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .info-card h3 {
+            font-size: 1.45rem;
+            color: var(--purple);
+            margin-bottom: 12px;
+        }
+
+        .info-card p,
+        .info-card li {
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .info-card ul {
+            padding-left: 18px;
+            display: grid;
+            gap: 9px;
+        }
+
+        .email-card {
+            overflow: hidden;
+            background: white;
+            border: 1px solid #e5deec;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .email-window-top {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            background: #f0ebf6;
+            border-bottom: 1px solid var(--border);
+            padding: 15px 20px;
+        }
+
+        .window-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #b9a6d0;
+        }
+
+        .window-title {
+            margin-left: 8px;
+            color: #6c5b7f;
+            font-size: 0.78rem;
+        }
+
+        .email-fields {
+            padding: 25px 30px 10px;
+        }
+
+        .email-field {
+            display: grid;
+            grid-template-columns: 82px minmax(0, 1fr);
+            gap: 12px;
+            padding: 13px 0;
+            border-bottom: 1px solid #f0ebf4;
+            font-size: 0.87rem;
+        }
+
+        .email-field strong {
+            color: #877496;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .email-field span {
+            color: #4e435a;
+            overflow-wrap: anywhere;
+        }
+
+        .email-body {
+            padding: 22px 30px 32px;
+            color: #514957;
+            font-size: 0.94rem;
+            line-height: 1.9;
+        }
+
+        .email-body p {
+            margin-bottom: 18px;
+        }
+
+        .email-body .greeting {
+            color: var(--purple);
+            font-weight: 700;
+        }
+
+        .email-signature {
+            margin-top: 25px;
+        }
+
+        .email-signature strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            color: var(--purple);
+            font-size: 1.25rem;
+        }
+
+        .email-signature span {
+            color: var(--muted);
+            font-size: 0.83rem;
+        }
+
+        .copy-area {
+            padding: 0 30px 30px;
+        }
+
+        .copy-button {
+            border: 0;
+            background: var(--purple);
+            color: white;
+            padding: 12px 17px;
+            border-radius: 7px;
+            font: inherit;
+            font-size: 0.84rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .copy-button:hover {
+            background: #53376e;
+            transform: translateY(-1px);
+        }
+
+        .copy-status {
+            min-height: 24px;
+            margin-top: 8px;
+            color: #6c5687;
+            font-size: 0.82rem;
+        }
+
+        .tips-section {
+            margin-top: 75px;
+        }
+
+        .tips-heading {
+            margin-bottom: 28px;
+        }
+
+        .tips-heading .eyebrow {
+            color: #80649f;
+        }
+
+        .tips-heading h2 {
+            color: var(--purple);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-top: 12px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .tip-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 25px;
+        }
+
+        .tip-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--lilac);
+            color: var(--purple);
+            font-family: "Playfair Display", serif;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+
+        .tip-card h3 {
+            color: var(--purple);
+            font-size: 1.3rem;
+            margin-bottom: 9px;
+        }
+
+        .tip-card p {
+            color: var(--muted);
+            font-size: 0.87rem;
+        }
+
+        .avoid-panel {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 25px;
+            padding: 30px;
+            border-radius: 16px;
+            background: linear-gradient(130deg, #eee7f7, #faf7fd);
+            border: 1px solid #e3d8ef;
+        }
+
+        .avoid-panel h3 {
+            color: var(--purple);
+            font-size: 1.65rem;
+        }
+
+        .avoid-panel p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .avoid-list {
+            display: grid;
+            gap: 12px;
+            list-style: none;
+        }
+
+        .avoid-list li {
+            color: #62576c;
+            font-size: 0.88rem;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .avoid-list li::before {
+            content: "✦";
+            color: #8d70af;
+            position: absolute;
+            left: 0;
+        }
+
+        .next-section {
+            margin-top: 70px;
+            padding: 35px;
+            border-radius: 18px;
+            background: linear-gradient(130deg, #eee7f7, #faf7fd);
+            border: 1px solid #e3d8ef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .next-section h2 {
+            color: var(--purple);
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            margin-bottom: 8px;
+        }
+
+        .next-section p {
+            max-width: 570px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .button-link {
+            display: inline-block;
+            flex-shrink: 0;
+            background: var(--purple);
+            color: white;
+            padding: 13px 20px;
+            border-radius: 7px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .button-link:hover {
+            background: #53376e;
+            transform: translateY(-2px);
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .related-links a {
+            color: #6d5488;
+            border-bottom: 1px solid #cdbce0;
+            padding-bottom: 3px;
+            font-size: 0.85rem;
+        }
+
+        .related-links a:hover {
+            color: var(--deep-purple);
+            border-color: var(--deep-purple);
+        }
+
+        footer {
+            background: var(--deep-purple);
+            color: #e7deef;
+            padding: 35px 5%;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-title {
+            font-family: "Playfair Display", serif;
+            font-size: 1.25rem;
+            color: white;
+        }
+
+        footer p {
+            font-size: 0.78rem;
+            color: #c8bbd8;
+            margin-top: 5px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            font-size: 0.78rem;
+            color: #e7deef;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1000px) {
+            .nav-wrap {
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+            }
+
+            nav.open {
+                display: block;
+            }
+
+            nav ul {
+                justify-content: flex-start;
+                padding-top: 10px;
+            }
+
+            nav a {
+                padding: 9px 11px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .email-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+
+            .tips-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .avoid-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .next-section {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 27px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .hero {
+                padding: 58px 6% 68px;
+            }
+
+            main {
+                padding: 48px 5% 65px;
+            }
+
+            .hero h1 {
+                font-size: 2.65rem;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .email-fields {
+                padding: 20px 20px 8px;
+            }
+
+            .email-body {
+                padding: 20px;
+            }
+
+            .copy-area {
+                padding: 0 20px 24px;
+            }
+
+            .email-field {
+                grid-template-columns: 66px minmax(0, 1fr);
+                gap: 8px;
+            }
+
+            .brand strong {
+                font-size: 1rem;
+            }
+
+            .brand span {
+                font-size: 0.58rem;
+                letter-spacing: 1px;
+            }
+
+            .avoid-panel {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="top-line"></div>
+
+    <header>
+        <div class="nav-wrap">
+            <a class="brand" href="index.html" aria-label="Thabile Khukhwane portfolio home">
+                <strong>Thabile Khukhwane</strong>
+                <span>Business Intelligence &amp; Data Analytics</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+                ☰ Menu
+            </button>
+
+            <nav id="main-navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="individual-reflection.html">Personal Reflection</a></li>
+                    <li><a href="group-reflection.html">Group Reflection</a></li>
+                    <li><a href="skills-projects.html">Skills &amp; Projects</a></li>
+                    <li><a href="application-letter.html">Application Letter</a></li>
+                    <li><a href="email-template.html" aria-current="page">Email Template</a></li>
+                    <li><a href="study-resources.html">Study Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <span class="eyebrow">Portfolio · Page 07</span>
+            <h1>Words that open <em>doors.</em></h1>
+            <p>
+                Professional email communication is more than sending a message.
+                It is an opportunity to demonstrate respect, clarity, confidence,
+                and attention to detail.
+            </p>
+            <div class="hero-meta">
+                <span>Academic Communication</span>
+                <span>Professional Etiquette</span>
+                <span>Digital Literacy</span>
+            </div>
+        </div>
+    </section>
+
+    <main id="main-content">
+        <section class="section-heading">
+            <span class="eyebrow">A practical example</span>
+            <h2>Professional email template</h2>
+            <p>
+                This sample demonstrates how to introduce yourself, explain the
+                reason for writing, and close a professional message politely.
+                Adapt the details to your actual situation before sending.
+            </p>
+        </section>
+
+        <div class="email-layout">
+            <aside class="sidebar" aria-label="Email writing guide">
+                <section class="info-card">
+                    <span class="small-label">The purpose</span>
+                    <h3>Write with clarity</h3>
+                    <p>
+                        Use this template when introducing yourself to a lecturer,
+                        making a professional enquiry, or requesting information
+                        about an opportunity.
+                    </p>
+                </section>
+
+                <section class="info-card">
+                    <span class="small-label">A simple formula</span>
+                    <h3>Structure matters</h3>
+                    <ul>
+                        <li>A clear and relevant subject line</li>
+                        <li>A respectful greeting</li>
+                        <li>A brief introduction</li>
+                        <li>A clear reason for writing</li>
+                        <li>A polite closing and signature</li>
+                    </ul>
+                </section>
+
+                <section class="info-card">
+                    <span class="small-label">Remember</span>
+                    <h3>Your digital impression</h3>
+                    <p>
+                        Proofread before sending. Correct spelling, suitable
+                        language, and a professional email address help create
+                        a positive impression.
+                    </p>
+                </section>
+            </aside>
+
+            <article class="email-card" aria-label="Example professional email">
+                <div class="email-window-top">
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                    <span class="window-title">New message · Example email</span>
+                </div>
+
+                <div class="email-fields">
+                    <div class="email-field">
+                        <strong>To</strong>
+                        <span>[Recipient’s email address]</span>
+                    </div>
+                    <div class="email-field">
+                        <strong>Subject</strong>
+                        <span>Enquiry Regarding [Opportunity or Topic]</span>
+                    </div>
+                </div>
+
+                <div class="email-body" id="email-copy-content">
+                    <p class="greeting">Dear [Recipient’s Name],</p>
+
+                    <p>
+                        My name is Thabile Khukhwane, and I am a first-year
+                        Business Intelligence and Data Analytics student at
+                        Botswana Accountancy College.
+                    </p>
+
+                    <p>
+                        I am writing to enquire about [briefly state your reason
+                        for contacting the recipient]. I would appreciate any
+                        information or guidance you may be able to provide
+                        regarding this matter.
+                    </p>
+
+                    <p>
+                        Thank you for your time and consideration. I look forward
+                        to your response.
+                    </p>
+
+                    <p>Kind regards,</p>
+
+                    <div class="email-signature">
+                        <strong>Thabile Khukhwane</strong>
+                        <span>Business Intelligence and Data Analytics Student</span><br>
+                        <span>Botswana Accountancy College</span><br>
+                        <span>Email: Khukhwaneethabilea@gmail.com</span><br>
+                        <span>Phone: 72937667</span>
+                    </div>
+                </div>
+
+                <div class="copy-area">
+                    <button class="copy-button" id="copy-email" type="button">
+                        Copy email template
+                    </button>
+                    <p class="copy-status" id="copy-status" aria-live="polite"></p>
+                </div>
+            </article>
+        </div>
+
+        <section class="tips-section">
+            <div class="tips-heading">
+                <span class="eyebrow">The details make a difference</span>
+                <h2>Six habits of effective email writing</h2>
+            </div>
+
+            <div class="tips-grid">
+                <article class="tip-card">
+                    <span class="tip-number">01</span>
+                    <h3>Be specific</h3>
+                    <p>
+                        Write a subject line that tells the reader what the
+                        message concerns instead of using a vague heading.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <span class="tip-number">02</span>
+                    <h3>Show respect</h3>
+                    <p>
+                        Use an appropriate greeting and address the recipient
+                        respectfully, especially in academic and workplace settings.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <span class="tip-number">03</span>
+                    <h3>Keep it concise</h3>
+                    <p>
+                        Explain your purpose directly. Organise longer messages
+                        into short paragraphs that are easy to read.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <span class="tip-number">04</span>
+                    <h3>Use formal language</h3>
+                    <p>
+                        Avoid unnecessary slang, excessive emojis, and informal
+                        abbreviations in professional communication.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <span class="tip-number">05</span>
+                    <h3>Proofread carefully</h3>
+                    <p>
+                        Check names, grammar, spelling, attachments, and recipient
+                        addresses before pressing send.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <span class="tip-number">06</span>
+                    <h3>Close professionally</h3>
+                    <p>
+                        Thank the recipient where appropriate and finish with a
+                        suitable closing followed by your name and contact details.
+                    </p>
+                </article>
+            </div>
+
+            <div class="avoid-panel">
+                <div>
+                    <span class="small-label">Professional etiquette</span>
+                    <h3>Small mistakes can distract from a good message.</h3>
+                    <p>
+                        A quick review before sending helps ensure your message
+                        is clear, respectful, and complete.
+                    </p>
+                </div>
+
+                <ul class="avoid-list">
+                    <li>Do not send a message without a meaningful subject line.</li>
+                    <li>Do not use all capital letters to express urgency.</li>
+                    <li>Do not send unreviewed messages with avoidable spelling errors.</li>
+                    <li>Do not forget to attach a document you refer to in the email.</li>
+                    <li>Do not use the same generic message for every recipient without adapting it.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="next-section">
+            <div>
+                <h2>Keep learning. Keep growing.</h2>
+                <p>
+                    The final portfolio page brings together practical study
+                    strategies and learning resources that can support Thabile’s
+                    development throughout her academic journey.
+                </p>
+            </div>
+            <a class="button-link" href="study-resources.html">Explore Study Resources →</a>
+        </section>
+
+        <div class="related-links" aria-label="Related portfolio pages">
+            <a href="application-letter.html">← Application Letter</a>
+            <a href="skills-projects.html">Skills &amp; Projects</a>
+            <a href="index.html">Return to home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-title">Thabile Khukhwane</div>
+                <p>Learning with purpose. Growing with intention.</p>
+                <p>© 2026 · Digital Academic Portfolio</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="group-reflection.html">Group Reflection</a>
+                <a href="application-letter.html">Application Letter</a>
+                <a href="study-resources.html">Study Resources</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navigation = document.querySelector("#main-navigation");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navigation.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.innerHTML = isOpen ? "✕ Close" : "☰ Menu";
+        });
+
+        const copyButton = document.querySelector("#copy-email");
+        const copyStatus = document.querySelector("#copy-status");
+
+        copyButton.addEventListener("click", async function () {
+            const emailText = [
+                "To: [Recipient’s email address]",
+                "Subject: Enquiry Regarding [Opportunity or Topic]",
+                "",
+                "Dear [Recipient’s Name],",
+                "",
+                "My name is Thabile Khukhwane, and I am a first-year Business Intelligence and Data Analytics student at Botswana Accountancy College.",
+                "",
+                "I am writing to enquire about [briefly state your reason for contacting the recipient]. I would appreciate any information or guidance you may be able to provide regarding this matter.",
+                "",
+                "Thank you for your time and consideration. I look forward to your response.",
+                "",
+                "Kind regards,",
+                "Thabile Khukhwane",
+                "Business Intelligence and Data Analytics Student",
+                "Botswana Accountancy College",
+                "Email: Khukhwaneethabilea@gmail.com",
+                "Phone: 72937667"
+            ].join("\n");
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(emailText);
+                    copyStatus.textContent = "Template copied. You can now paste it into your email.";
+                } else {
+                    const textArea = document.createElement("textarea");
+                    textArea.value = emailText;
+                    textArea.setAttribute("readonly", "");
+                    textArea.style.position = "fixed";
+                    textArea.style.opacity = "0";
+                    document.body.appendChild(textArea);
+                    textArea.select();
+
+                    const copied = document.execCommand("copy");
+                    textArea.remove();
+
+                    copyStatus.textContent = copied
+                        ? "Template copied. You can now paste it into your email."
+                        : "Copy was not available here. Select and copy the template manually.";
+                }
+            } catch (error) {
+                copyStatus.textContent = "Copy was not available here. Select and copy the template manually.";
+            }
+        });
+    </script>
+</body>
+</html>
