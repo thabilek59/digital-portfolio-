@@ -1,693 +1,972 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="The curriculum vitae of Thabile Khukhwane, a first-year Business Intelligence and Data Analytics student at Botswana Accountancy College.">
     <meta name="author" content="Thabile Khukhwane">
-    <meta name="description"
-          content="Explore Thabile Khukhwane's CV, education, leadership experience, technical skills and career interests in business intelligence, data analytics and finance.">
+    <meta name="theme-color" content="#211333">
+    <title>Curriculum Vitae | Thabile Khukhwane</title>
 
-    <meta name="theme-color" content="#6D183B">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
-    <title>My CV | Thabile Khukhwane</title>
+    <style>
+        :root {
+            --purple-deep: #211333;
+            --purple: #49315F;
+            --purple-light: #8F79A8;
+            --lilac: #E9DFF3;
+            --lilac-pale: #F7F3FA;
+            --silver: #C9C6D1;
+            --silver-dark: #888392;
+            --white: #FFFFFF;
+            --ink: #292331;
+            --muted: #77717F;
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 30px; }
+
+        body {
+            background: var(--lilac-pale);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        button, a { -webkit-tap-highlight-color: transparent; }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--purple-light);
+            outline-offset: 5px;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            z-index: 1000;
+            padding: 12px 20px;
+            background: var(--purple-deep);
+            color: white;
+            border: 1px solid var(--silver);
+            transform: translateY(-160%);
+        }
+
+        .skip-link:focus { transform: translateY(0); }
+
+        .site-header {
+            position: relative;
+            z-index: 10;
+            background: var(--lilac-pale);
+            border-bottom: 1px solid #49315F18;
+        }
+
+        .header-inner {
+            width: min(1280px, 90%);
+            min-height: 82px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand { display: flex; align-items: center; gap: 12px; }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--purple-light);
+            border-radius: 50%;
+            color: var(--purple);
+            font-family: var(--serif);
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .brand-copy { display: grid; }
+
+        .brand-copy strong {
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .brand-copy span {
+            color: var(--muted);
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 17px;
+        }
+
+        .main-nav a {
+            color: #5C5366;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .main-nav a:hover,
+        .main-nav a[aria-current="page"] { color: var(--purple-light); }
+
+        .nav-toggle {
+            display: none;
+            width: 43px;
+            height: 43px;
+            border: 1px solid var(--silver);
+            border-radius: 50%;
+            background: transparent;
+            color: var(--purple-deep);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        main { min-height: 60vh; }
+
+        .page-hero {
+            padding: 78px 0 70px;
+            background:
+                radial-gradient(ellipse at 90% 15%, #8F79A824, transparent 35%),
+                linear-gradient(125deg, #F7F3FA, #E8DDF1);
+            border-bottom: 1px solid #D9D0E2;
+        }
+
+        .page-hero-inner {
+            width: min(1120px, 88%);
+            margin: auto;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--purple);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 32px;
+            height: 1px;
+            background: var(--purple-light);
+        }
+
+        h1, h2, h3 { font-family: var(--serif); font-weight: 400; }
+
+        .page-hero h1 {
+            max-width: 850px;
+            margin-top: 20px;
+            color: var(--purple-deep);
+            font-size: clamp(45px, 7vw, 78px);
+            letter-spacing: -2px;
+            line-height: 1.12;
+        }
+
+        .page-hero h1 em { color: var(--purple-light); }
+
+        .page-hero p {
+            max-width: 620px;
+            margin-top: 22px;
+            color: #655C6E;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .cv-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+
+        .cv-meta span {
+            padding: 8px 12px;
+            border: 1px solid #C9C6D1;
+            background: #FFFFFF90;
+            color: var(--purple);
+            font-size: 10px;
+            letter-spacing: 0.4px;
+        }
+
+        .cv-section { padding: 70px 0; }
+
+        .cv-layout {
+            width: min(1120px, 88%);
+            margin: auto;
+            display: grid;
+            grid-template-columns: 0.72fr 1.5fr;
+            align-items: start;
+            gap: 65px;
+        }
+
+        .cv-sidebar {
+            position: sticky;
+            top: 25px;
+            padding: 27px;
+            background: var(--purple-deep);
+            color: white;
+        }
+
+        .sidebar-label {
+            color: #C7B3DF;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .cv-sidebar h2 {
+            margin-top: 14px;
+            font-size: 29px;
+            line-height: 1.3;
+        }
+
+        .cv-sidebar p {
+            margin-top: 15px;
+            color: #D0C6DB;
+            font-size: 11px;
+            line-height: 1.9;
+        }
+
+        .sidebar-rule {
+            height: 1px;
+            margin: 24px 0;
+            background: #FFFFFF30;
+        }
+
+        .sidebar-link {
+            display: block;
+            padding: 11px 0;
+            border-bottom: 1px solid #FFFFFF25;
+            color: #F0EAF6;
+            font-size: 11px;
+        }
+
+        .sidebar-link:hover { color: #C7B3DF; }
+
+        .cv-content { min-width: 0; }
+
+        .cv-block {
+            margin-bottom: 48px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid #D9D0E2;
+            scroll-margin-top: 25px;
+        }
+
+        .cv-block:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .section-kicker {
+            color: var(--purple-light);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .cv-block h2 {
+            margin-top: 8px;
+            margin-bottom: 22px;
+            color: var(--purple-deep);
+            font-size: 34px;
+            line-height: 1.25;
+        }
+
+        .profile-text {
+            color: #6E6676;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-left: 7px;
+            padding: 0 0 28px 24px;
+            border-left: 1px solid var(--silver);
+        }
+
+        .timeline-item:last-child { padding-bottom: 0; }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -5px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--purple-light);
+            box-shadow: 0 0 0 4px var(--lilac);
+        }
+
+        .timeline-date {
+            color: var(--purple-light);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .timeline-item h3 {
+            margin-top: 7px;
+            color: var(--purple-deep);
+            font-size: 22px;
+        }
+
+        .timeline-item p {
+            margin-top: 7px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .skill-list span {
+            padding: 10px 13px;
+            border: 1px solid #D9D0E2;
+            background: #FFFFFFB8;
+            color: #554663;
+            font-size: 11px;
+        }
+
+        .strength-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .strength-item {
+            padding: 17px;
+            border-left: 2px solid var(--purple-light);
+            background: white;
+        }
+
+        .strength-item h3 {
+            color: var(--purple-deep);
+            font-size: 19px;
+        }
+
+        .strength-item p {
+            margin-top: 6px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .experience-note {
+            padding: 22px;
+            border: 1px solid #D9D0E2;
+            background: #FFFFFFA8;
+        }
+
+        .experience-note strong {
+            display: block;
+            color: var(--purple-deep);
+            font-family: var(--serif);
+            font-size: 21px;
+            font-weight: 400;
+        }
+
+        .experience-note p {
+            margin-top: 9px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .career-note {
+            padding: 24px;
+            background: var(--lilac);
+            border-left: 3px solid var(--purple-light);
+        }
+
+        .career-note h3 {
+            color: var(--purple-deep);
+            font-size: 24px;
+        }
+
+        .career-note p {
+            margin-top: 9px;
+            color: #62566D;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .cv-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .button {
+            min-height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 19px;
+            border: 1px solid var(--purple-deep);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .button-primary {
+            background: var(--purple-deep);
+            color: white;
+        }
+
+        .button-primary:hover { background: var(--purple); }
+
+        .button-secondary {
+            color: var(--purple-deep);
+        }
+
+        .button-secondary:hover { background: var(--lilac); }
+
+        .closing-section {
+            padding: 70px 0;
+            background: linear-gradient(120deg, #E6DCEC, #F7F3FA);
+            text-align: center;
+        }
+
+        .closing-inner { width: min(750px, 88%); margin: auto; }
+
+        .closing-inner h2 {
+            margin-top: 16px;
+            color: var(--purple-deep);
+            font-size: clamp(32px, 4.5vw, 48px);
+            line-height: 1.25;
+        }
+
+        .closing-inner h2 em { color: var(--purple-light); }
+
+        .closing-inner p {
+            margin: 15px auto 24px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .site-footer {
+            padding: 30px 6%;
+            background: #170D23;
+            color: #C8BECE;
+        }
+
+        .footer-inner {
+            width: min(1180px, 100%);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: white;
+            font-family: var(--serif);
+            font-size: 17px;
+        }
+
+        .footer-note {
+            margin-top: 5px;
+            color: #B2A6BD;
+            font-size: 10px;
+        }
+
+        .footer-links { display: flex; flex-wrap: wrap; gap: 15px; }
+
+        .footer-links a { color: #D3C8DE; font-size: 10px; }
+
+        .footer-links a:hover { color: white; }
+
+        .copyright {
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid #FFFFFF20;
+            color: #A99BB5;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 1050px) {
+            .header-inner { width: 92%; }
+            .main-nav { gap: 10px; }
+            .main-nav a { font-size: 9px; }
+            .cv-layout { gap: 35px; }
+        }
+
+        @media (max-width: 760px) {
+            .header-inner { min-height: 75px; }
+
+            .nav-toggle {
+                display: grid;
+                place-items: center;
+            }
+
+            .main-nav {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0;
+                display: none;
+                padding: 18px 6% 25px;
+                background: var(--lilac-pale);
+                border-bottom: 1px solid var(--silver);
+                box-shadow: 0 15px 25px #2113330B;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .main-nav.is-open { display: flex; flex-direction: column; }
+
+            .main-nav a {
+                padding: 12px 0;
+                border-bottom: 1px solid #49315F12;
+                font-size: 12px;
+            }
+
+            .page-hero { padding: 58px 0; }
+
+            .page-hero h1 { letter-spacing: -1px; }
+
+            .cv-section { padding: 45px 0; }
+
+            .cv-layout { grid-template-columns: 1fr; gap: 35px; }
+
+            .cv-sidebar { position: static; }
+
+            .strength-list { grid-template-columns: 1fr; }
+
+            .footer-inner { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media print {
+            .site-header, .site-footer, .closing-section,
+            .skip-link, .cv-actions, .cv-sidebar { display: none !important; }
+
+            body, .page-hero, .cv-section { background: white !important; }
+
+            .cv-layout { width: 100%; display: block; }
+
+            .page-hero, .cv-section { padding: 20px 0; }
+
+            .cv-block { break-inside: avoid; }
+        }
+    </style>
 </head>
 
 <body>
 
-    <a href="#main-content" class="skip-link">
-        Skip to main content
-    </a>
+<a class="skip-link" href="#main-content">Skip to main content ↘</a>
 
-    <!-- HEADER -->
-    <header class="site-header">
+<header class="site-header">
+    <div class="header-inner">
 
-        <p class="header-note">
-            A PERSONAL SPACE FOR GROWTH & AMBITION
-        </p>
+        <a class="brand" href="index.html" aria-label="Thabile Khukhwane home">
+            <span class="brand-mark" aria-hidden="true">T</span>
+            <span class="brand-copy">
+                <strong>Thabile Khukhwane</strong>
+                <span>Personal Portfolio</span>
+            </span>
+        </a>
 
-        <button
-            class="menu-toggle"
-            id="menu-toggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="main-navigation">
-
-            <span></span>
-            <span></span>
+        <button class="nav-toggle" type="button"
+                aria-label="Open navigation menu"
+                aria-controls="main-navigation"
+                aria-expanded="false">
+            <span aria-hidden="true">☰</span>
         </button>
 
-        <nav class="main-navigation" id="main-navigation"
-             aria-label="Main navigation">
-
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a href="about.html">My Story</a>
             <a href="cv.html" aria-current="page">My CV</a>
-            <a href="skills.html">My Skills</a>
-            <a href="projects.html">My Academic World</a>
-            <a href="reflections.html">My Reflections</a>
-            <a href="career-goals.html">My Ambitions</a>
-            <a href="contact.html">Let's Connect</a>
-
+            <a href="individual-reflection.html">My Reflection</a>
+            <a href="group-reflection.html">Group Reflection</a>
+            <a href="skills-projects.html">Skills &amp; Projects</a>
+            <a href="application-letter.html">Application Letter</a>
+            <a href="email-template.html">Email Template</a>
+            <a href="study-resources.html">Study Resources</a>
         </nav>
 
-    </header>
+    </div>
+</header>
 
+<main id="main-content">
 
-    <main id="main-content">
+    <section class="page-hero">
+        <div class="page-hero-inner">
 
-        <!-- CV HERO -->
-        <section class="page-hero section-padding">
+            <p class="eyebrow">A professional profile</p>
 
-            <p class="hero-eyebrow">
-                ✳ MY PROFESSIONAL PROFILE
-            </p>
-
-            <h1 class="page-title">
-                My journey.
-                <span class="text-italic">My potential.</span>
+            <h1>
+                My experience.
+                <em>My direction.</em>
             </h1>
 
-            <p class="page-intro">
-                An overview of my education, developing skills,
+            <p>
+                An overview of my educational journey, developing abilities,
                 leadership experience and professional aspirations.
+                I am at the beginning of my career, building a foundation
+                for the opportunities ahead.
             </p>
 
-            <a href="#cv-content" class="button button-primary">
-                EXPLORE MY CV
-                <span aria-hidden="true">↘</span>
-            </a>
-
-        </section>
-
-
-        <!-- CV PROFILE -->
-        <section class="cv-section section-padding" id="cv-content">
-
-            <div class="section-label">
-                <span>01</span>
-                <span>AT A GLANCE</span>
+            <div class="cv-meta">
+                <span>Business Intelligence &amp; Data Analytics</span>
+                <span>Botswana Accountancy College</span>
+                <span>First Year</span>
             </div>
 
-            <div class="cv-profile-card">
+        </div>
+    </section>
 
-                <div class="cv-profile-main">
+    <section class="cv-section">
+        <div class="cv-layout">
 
-                    <p class="small-overline">
-                        PERSONAL PROFILE
+            <aside class="cv-sidebar">
+                <span class="sidebar-label">Curriculum vitae</span>
+
+                <h2>Thabile<br>Khukhwane</h2>
+
+                <p>
+                    An aspiring data and financial analyst with an interest
+                    in business, technology, analytical thinking and
+                    continuous development.
+                </p>
+
+                <div class="sidebar-rule"></div>
+
+                <span class="sidebar-label">On this page</span>
+
+                <a class="sidebar-link" href="#profile">Professional profile</a>
+                <a class="sidebar-link" href="#education">Education</a>
+                <a class="sidebar-link" href="#leadership">Leadership experience</a>
+                <a class="sidebar-link" href="#technical-skills">Technical skills</a>
+                <a class="sidebar-link" href="#personal-strengths">Personal strengths</a>
+                <a class="sidebar-link" href="#career-direction">Career direction</a>
+
+                <div class="sidebar-rule"></div>
+
+                <span class="sidebar-label">Contact</span>
+
+                <p>
+                    Khukhwaneethabilea@gmail.com
+                    <br>
+                    72937667
+                </p>
+            </aside>
+
+            <div class="cv-content">
+
+                <section class="cv-block" id="profile">
+                    <span class="section-kicker">01 / Introduction</span>
+                    <h2>Professional Profile</h2>
+
+                    <p class="profile-text">
+                        I am a first-year Business Intelligence and Data
+                        Analytics student at Botswana Accountancy College.
+                        I am interested in understanding how data can support
+                        business decisions and help organisations identify
+                        patterns, solve problems and improve performance.
+                        I am developing my technical knowledge and analytical
+                        abilities while strengthening my communication,
+                        leadership and problem-solving skills.
                     </p>
+                </section>
 
-                    <h2>Thabile Khukhwane</h2>
+                <section class="cv-block" id="education">
+                    <span class="section-kicker">02 / Academic background</span>
+                    <h2>Education</h2>
 
-                    <p class="cv-role">
-                        Business Intelligence & Data Analytics Student
-                    </p>
-
-                    <p>
-                        A curious, ambitious and independent-minded
-                        first-year student at Botswana Accountancy
-                        College, interested in the relationship
-                        between business, data, technology and finance.
-                    </p>
-
-                    <p>
-                        Eager to develop technical knowledge,
-                        strengthen analytical thinking and build
-                        a foundation for a future career in data
-                        or financial analysis.
-                    </p>
-
-                </div>
-
-                <div class="cv-profile-details">
-
-                    <div class="cv-detail">
-                        <span>INSTITUTION</span>
-                        <strong>Botswana Accountancy College</strong>
-                    </div>
-
-                    <div class="cv-detail">
-                        <span>PROGRAMME</span>
-                        <strong>BSc Business Intelligence and Data Analytics</strong>
-                    </div>
-
-                    <div class="cv-detail">
-                        <span>STUDY LEVEL</span>
-                        <strong>First Year</strong>
-                    </div>
-
-                    <div class="cv-detail">
-                        <span>CAREER INTERESTS</span>
-                        <strong>Data Analysis · Financial Analysis</strong>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- EDUCATION -->
-        <section class="cv-education-section section-padding">
-
-            <div class="section-label">
-                <span>02</span>
-                <span>EDUCATION & DEVELOPMENT</span>
-            </div>
-
-            <h2>
-                The foundation
-                <span class="text-italic">behind my ambition.</span>
-            </h2>
-
-            <div class="cv-timeline">
-
-                <article class="cv-timeline-entry">
-
-                    <span class="cv-timeline-number">01</span>
-
-                    <div class="cv-timeline-content">
-
-                        <p class="cv-entry-label">
-                            PRIMARY EDUCATION
-                        </p>
-
-                        <h3>Acacia Primary School</h3>
-
-                        <p class="cv-entry-duration">
-                            Seven years
-                        </p>
-
-                        <p>
-                            Completed seven years of primary
-                            education, establishing the foundation
-                            for my academic development.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="cv-timeline-entry">
-
-                    <span class="cv-timeline-number">02</span>
-
-                    <div class="cv-timeline-content">
-
-                        <p class="cv-entry-label">
-                            SECONDARY EDUCATION
-                        </p>
-
-                        <h3>Rainbow High School</h3>
-
-                        <p class="cv-entry-duration">
-                            Five years
-                        </p>
-
-                        <p>
-                            Completed five years of high school.
-                            Served as a monitor and prefect,
-                            gaining experience in student leadership
-                            and responsibility.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="cv-timeline-entry">
-
-                    <span class="cv-timeline-number">03</span>
-
-                    <div class="cv-timeline-content">
-
-                        <p class="cv-entry-label">
-                            CURRENT TERTIARY EDUCATION
-                        </p>
-
+                    <div class="timeline-item">
+                        <span class="timeline-date">Current studies</span>
                         <h3>Botswana Accountancy College</h3>
-
-                        <p class="cv-entry-duration">
-                            First-year student
+                        <p>
+                            Programme: Business Intelligence and Data Analytics
+                            (BIDA). Currently in the first year of study,
+                            developing a foundation in business, data,
+                            technology and analytical thinking.
                         </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">Previous education</span>
+                        <h3>Rainbow High School</h3>
+                        <p>
+                            Completed five years of secondary education.
+                            Served in school leadership roles as a class
+                            monitor and school prefect.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">Foundational education</span>
+                        <h3>Acacia Primary School</h3>
+                        <p>
+                            Completed seven years of primary education,
+                            establishing the foundation for further learning.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="cv-block" id="leadership">
+                    <span class="section-kicker">03 / Responsibility</span>
+                    <h2>Leadership Experience</h2>
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">School experience</span>
+                        <h3>Class Monitor</h3>
+                        <p>
+                            Held a class leadership responsibility, gaining
+                            experience in accountability, cooperation and
+                            representing classroom responsibilities.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">School experience</span>
+                        <h3>School Prefect</h3>
+                        <p>
+                            Served as a school prefect, developing an
+                            appreciation for responsibility, appropriate
+                            conduct and contributing to the school community.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="cv-block" id="technical-skills">
+                    <span class="section-kicker">04 / Developing capabilities</span>
+                    <h2>Technical Skills</h2>
+
+                    <div class="skill-list">
+                        <span>Basic programming and coding</span>
+                        <span>Computer literacy</span>
+                        <span>Microsoft Word</span>
+                        <span>Microsoft Excel</span>
+                        <span>Microsoft PowerPoint</span>
+                        <span>Microsoft Access</span>
+                        <span>Basic data interpretation</span>
+                        <span>Mathematical problem-solving</span>
+                        <span>Statistical fundamentals</span>
+                    </div>
+
+                    <p class="profile-text" style="margin-top: 18px;">
+                        These are developing skills. My goal is to strengthen
+                        them through coursework, practical exercises and
+                        future projects.
+                    </p>
+                </section>
+
+                <section class="cv-block" id="personal-strengths">
+                    <span class="section-kicker">05 / Personal qualities</span>
+                    <h2>Strengths</h2>
+
+                    <div class="strength-list">
+                        <article class="strength-item">
+                            <h3>Curiosity</h3>
+                            <p>
+                                Interested in learning, asking questions and
+                                exploring unfamiliar ideas.
+                            </p>
+                        </article>
+
+                        <article class="strength-item">
+                            <h3>Adaptability</h3>
+                            <p>
+                                Willing to learn new approaches and improve
+                                through experience.
+                            </p>
+                        </article>
+
+                        <article class="strength-item">
+                            <h3>Problem-solving</h3>
+                            <p>
+                                Interested in working through challenges
+                                using logic and analytical thinking.
+                            </p>
+                        </article>
+
+                        <article class="strength-item">
+                            <h3>Growth mindset</h3>
+                            <p>
+                                Motivated to build confidence and develop
+                                personally and academically.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="cv-block">
+                    <span class="section-kicker">06 / Experience status</span>
+                    <h2>Employment &amp; Practical Experience</h2>
+
+                    <div class="experience-note">
+                        <strong>At the beginning of my professional journey</strong>
 
                         <p>
-                            Pursuing a Bachelor of Science in
-                            Business Intelligence and Data Analytics,
-                            with academic interests spanning
-                            business, finance, mathematics,
-                            technology and data analysis.
+                            I have not yet held formal employment or completed
+                            an internship. My current experience includes
+                            school leadership responsibilities and academic
+                            learning. I look forward to developing practical
+                            experience through relevant projects and future
+                            professional opportunities.
                         </p>
+                    </div>
+                </section>
 
+                <section class="cv-block" id="career-direction">
+                    <span class="section-kicker">07 / Future aspirations</span>
+                    <h2>Career Direction</h2>
+
+                    <div class="career-note">
+                        <h3>Data Analysis &amp; Financial Analysis</h3>
+
+                        <p>
+                            I am interested in exploring careers as a data
+                            analyst or financial analyst, particularly in
+                            banking or technology. I aim to strengthen my
+                            analytical and technical skills, gain practical
+                            experience and work towards long-term financial
+                            independence.
+                        </p>
                     </div>
 
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- EXPERIENCE -->
-        <section class="cv-experience-section section-padding">
-
-            <div class="section-label">
-                <span>03</span>
-                <span>LEADERSHIP & EXPERIENCE</span>
-            </div>
-
-            <div class="experience-intro">
-
-                <h2>
-                    Experience starts
-                    <span class="text-italic">with responsibility.</span>
-                </h2>
-
-                <p>
-                    Although I am at the beginning of my
-                    professional journey, my educational
-                    experiences have given me opportunities
-                    to develop responsibility and teamwork.
-                </p>
-
-            </div>
-
-            <article class="experience-card">
-
-                <div class="experience-card-label">
-                    <span>STUDENT LEADERSHIP</span>
-                    <span aria-hidden="true">✳</span>
-                </div>
-
-                <h3>Monitor & Prefect</h3>
-
-                <p class="experience-context">
-                    Rainbow High School
-                </p>
-
-                <p>
-                    Served in student leadership roles as a
-                    monitor and prefect during high school.
-                    These roles form part of my experience
-                    in taking on responsibility within a
-                    school environment.
-                </p>
-
-                <div class="experience-skills">
-
-                    <span>Responsibility</span>
-                    <span>Leadership</span>
-                    <span>Personal Development</span>
-
-                </div>
-
-            </article>
-
-
-            <div class="experience-note">
-
-                <span class="note-icon" aria-hidden="true">♡</span>
-
-                <div>
-                    <h3>At the beginning of my career</h3>
-
-                    <p>
-                        I do not yet have formal employment,
-                        internship or volunteer experience.
-                        I am focused on developing my
-                        knowledge, strengthening my skills
-                        and preparing for future opportunities.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- TECHNICAL SKILLS -->
-        <section class="cv-skills-section section-padding">
-
-            <div class="section-label">
-                <span>04</span>
-                <span>TECHNICAL CAPABILITIES</span>
-            </div>
-
-            <h2>
-                Skills I'm building.
-                <span class="text-italic">Knowledge I'm growing.</span>
-            </h2>
-
-            <div class="cv-skills-grid">
-
-                <article class="cv-skill-card">
-
-                    <span class="cv-skill-icon"
-                          aria-hidden="true">&lt;/&gt;</span>
-
-                    <h3>Programming & Coding</h3>
-
-                    <p>
-                        Basic knowledge of programming
-                        and coding concepts.
-                    </p>
-
-                    <span class="skill-level">
-                        BEGINNER
-                    </span>
-
-                </article>
-
-
-                <article class="cv-skill-card">
-
-                    <span class="cv-skill-icon"
-                          aria-hidden="true">⌘</span>
-
-                    <h3>Computer Literacy</h3>
-
-                    <p>
-                        General computer skills and familiarity
-                        with everyday digital tools.
-                    </p>
-
-                    <span class="skill-level">
-                        DEVELOPING
-                    </span>
-
-                </article>
-
-
-                <article class="cv-skill-card">
-
-                    <span class="cv-skill-icon"
-                          aria-hidden="true">▤</span>
-
-                    <h3>Microsoft Office</h3>
-
-                    <p>
-                        Basic use of Microsoft Word,
-                        Excel and PowerPoint.
-                    </p>
-
-                    <span class="skill-level">
-                        FOUNDATIONAL
-                    </span>
-
-                </article>
-
-
-                <article class="cv-skill-card">
-
-                    <span class="cv-skill-icon"
-                          aria-hidden="true">▦</span>
-
-                    <h3>Database Management</h3>
-
-                    <p>
-                        Foundational knowledge of
-                        Microsoft Access.
-                    </p>
-
-                    <span class="skill-level">
-                        FOUNDATIONAL
-                    </span>
-
-                </article>
-
-
-                <article class="cv-skill-card">
-
-                    <span class="cv-skill-icon"
-                          aria-hidden="true">↗</span>
-
-                    <h3>Data Analysis</h3>
-
-                    <p>
-                        Basic data analysis and
-                        interpretation.
-                    </p>
-
-                    <span class="skill-level">
-                        BEGINNER
-                    </span>
-
-                </article>
-
-
-                <article class="cv-skill-card">
-
-                    <span class="cv-skill-icon"
-                          aria-hidden="true">∑</span>
-
-                    <h3>Mathematical Problem-Solving</h3>
-
-                    <p>
-                        Applying statistical and mathematical
-                        reasoning to problems.
-                    </p>
-
-                    <span class="skill-level">
-                        DEVELOPING
-                    </span>
-
-                </article>
-
-            </div>
-
-            <a href="skills.html" class="text-link">
-                VIEW MY SKILLS IN DETAIL
-                <span aria-hidden="true">↗</span>
-            </a>
-
-        </section>
-
-
-        <!-- PERSONAL STRENGTHS -->
-        <section class="cv-strengths-section section-padding">
-
-            <div class="section-label">
-                <span>05</span>
-                <span>PERSONAL STRENGTHS</span>
-            </div>
-
-            <div class="strengths-grid">
-
-                <div class="strengths-heading">
-
-                    <h2>
-                        The qualities
-                        <span class="text-italic">
-                            behind the skills.
-                        </span>
-                    </h2>
-
-                    <p>
-                        I recognise that professional growth
-                        involves more than technical knowledge.
-                        It also requires curiosity, adaptability
-                        and a willingness to improve.
-                    </p>
-
-                </div>
-
-                <div class="strengths-list">
-
-                    <div class="strength-item">
-                        <span>01</span>
-                        <p>Quick learner</p>
-                        <span aria-hidden="true">✧</span>
+                    <div class="cv-actions">
+                        <a class="button button-primary" href="skills-projects.html">
+                            Skills &amp; Projects →
+                        </a>
+
+                        <a class="button button-secondary" href="application-letter.html">
+                            Application Letter →
+                        </a>
+
+                        <a class="button button-secondary" href="email-template.html">
+                            Email Template →
+                        </a>
                     </div>
-
-                    <div class="strength-item">
-                        <span>02</span>
-                        <p>Curious and open to learning</p>
-                        <span aria-hidden="true">✧</span>
-                    </div>
-
-                    <div class="strength-item">
-                        <span>03</span>
-                        <p>Problem-solving mindset</p>
-                        <span aria-hidden="true">✧</span>
-                    </div>
-
-                    <div class="strength-item">
-                        <span>04</span>
-                        <p>Willingness to improve</p>
-                        <span aria-hidden="true">✧</span>
-                    </div>
-
-                </div>
+                </section>
 
             </div>
-
-        </section>
-
-
-        <!-- CAREER DIRECTION -->
-        <section class="cv-career-section section-padding">
-
-            <p class="small-overline">
-                LOOKING AHEAD
-            </p>
-
-            <h2>
-                Where I hope
-                <span class="text-italic">to make my mark.</span>
-            </h2>
-
-            <p>
-                I am interested in future opportunities
-                as a data analyst or financial analyst,
-                particularly within the banking and
-                technology industries.
-            </p>
-
-            <p>
-                My long-term ambition is to develop a
-                successful, financially independent career,
-                gain international exposure and continue
-                growing both personally and professionally.
-            </p>
-
-            <a href="career-goals.html" class="button button-primary">
-                EXPLORE MY CAREER GOALS
-                <span aria-hidden="true">↗</span>
-            </a>
-
-        </section>
-
-
-        <!-- CV CLOSING -->
-        <section class="cv-closing-section section-padding">
-
-            <p class="closing-overline">
-                EVERY EXPERT WAS ONCE A BEGINNER.
-            </p>
-
-            <h2>
-                This is my starting point,
-                <span class="text-italic">not my limit.</span>
-            </h2>
-
-            <p>
-                I am committed to learning, developing
-                my abilities and preparing myself for
-                the opportunities ahead.
-            </p>
-
-            <a href="contact.html" class="text-link">
-                LET'S CONNECT
-                <span aria-hidden="true">↗</span>
-            </a>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-
-        <div class="footer-top">
-
-            <div class="footer-message">
-
-                <p class="footer-overline">
-                    A LITTLE SPACE ON THE INTERNET
-                </p>
-
-                <p class="footer-quote">
-                    Made of dreams, curiosity and a
-                    little bit of magic.
-                </p>
-
-            </div>
-
-            <div class="footer-links">
-
-                <a href="index.html">Home</a>
-                <a href="about.html">My Story</a>
-                <a href="skills.html">My Skills</a>
-                <a href="projects.html">Academic Work</a>
-                <a href="career-goals.html">Career Goals</a>
-                <a href="contact.html">Contact</a>
-
-            </div>
-
         </div>
+    </section>
 
-        <div class="footer-bottom">
+    <section class="closing-section">
+        <div class="closing-inner">
 
-            <p>
-                © <span id="current-year">2026</span>
-                Thabile Khukhwane
+            <p class="eyebrow" style="justify-content:center;">
+                Still learning. Still growing.
             </p>
 
+            <h2>
+                The beginning of a career
+                <em>built with intention.</em>
+            </h2>
+
             <p>
-                Growing into my own, one day at a time.
+                My CV reflects where I am today and the foundation I am
+                building for tomorrow. My next pages explore the lessons,
+                skills and experiences shaping my journey.
             </p>
 
-            <a href="#main-content" class="back-to-top">
-                BACK TO TOP ↑
+            <a class="button button-primary" href="individual-reflection.html">
+                Read my individual reflection →
             </a>
 
         </div>
+    </section>
 
-    </footer>
+</main>
 
+<footer class="site-footer">
+    <div class="footer-inner">
 
-    <!-- MOBILE NAVIGATION -->
-    <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const mainNavigation = document.getElementById("main-navigation");
+        <div>
+            <a class="footer-brand" href="index.html">Thabile Khukhwane</a>
+            <p class="footer-note">
+                A personal portfolio shaped by curiosity and ambition.
+            </p>
+        </div>
 
-        menuToggle.addEventListener("click", function () {
-            const isOpen =
-                menuToggle.getAttribute("aria-expanded") === "true";
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="individual-reflection.html">Reflection</a>
+            <a href="group-reflection.html">Group Work</a>
+            <a href="skills-projects.html">Skills &amp; Projects</a>
+            <a href="study-resources.html">Resources</a>
+        </nav>
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                String(!isOpen)
-            );
+    </div>
 
-            menuToggle.setAttribute(
-                "aria-label",
-                isOpen ? "Open navigation menu" : "Close navigation menu"
-            );
+    <p class="copyright">
+        &copy; <span id="current-year">2026</span> Thabile Khukhwane.
+        Personal academic portfolio.
+    </p>
+</footer>
 
-            mainNavigation.classList.toggle(
-                "navigation-open",
-                !isOpen
-            );
+<script>
+    const menuButton = document.querySelector(".nav-toggle");
+    const navigation = document.querySelector("#main-navigation");
 
-            document.body.classList.toggle("menu-open", !isOpen);
+    menuButton.addEventListener("click", function () {
+        const isOpen = navigation.classList.toggle("is-open");
+
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+        menuButton.querySelector("span").textContent = isOpen ? "×" : "☰";
+    });
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            navigation.classList.remove("is-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation menu");
+            menuButton.querySelector("span").textContent = "☰";
         });
+    });
 
-        mainNavigation.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", function () {
-                menuToggle.setAttribute("aria-expanded", "false");
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-                mainNavigation.classList.remove("navigation-open");
-                document.body.classList.remove("menu-open");
-            });
-        });
-
-        document.getElementById("current-year").textContent =
-            new Date().getFullYear();
-    </script>
+    document.querySelector("#current-year").textContent =
+        new Date().getFullYear();
+</script>
 
 </body>
 </html>
