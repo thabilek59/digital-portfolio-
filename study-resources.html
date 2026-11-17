@@ -1,0 +1,1110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Study strategies, academic research platforms, and learning resources for Thabile Khukhwane, a BIDA student at Botswana Accountancy College.">
+    <meta name="author" content="Thabile Khukhwane">
+    <title>Study Resources | Thabile Khukhwane</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --purple: #35204f;
+            --deep-purple: #241334;
+            --lilac: #eee7f7;
+            --light-lilac: #f8f5fc;
+            --silver: #c8c2d2;
+            --ink: #30283a;
+            --muted: #777080;
+            --white: #ffffff;
+            --border: #e8e1ef;
+            --shadow: 0 20px 55px rgba(45, 25, 67, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #faf8fc;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #a98bdb;
+            outline-offset: 4px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 12px;
+            top: -100px;
+            z-index: 1000;
+            background: white;
+            color: var(--purple);
+            padding: 12px 18px;
+            border-radius: 8px;
+        }
+
+        .skip-link:focus {
+            top: 12px;
+        }
+
+        .top-line {
+            height: 5px;
+            background: linear-gradient(90deg, #241334, #805da7, #d3c5e6, #805da7, #241334);
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-wrap {
+            max-width: 1240px;
+            margin: auto;
+            padding: 17px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.25;
+            flex-shrink: 0;
+        }
+
+        .brand strong {
+            color: var(--purple);
+            font-family: "Playfair Display", serif;
+            font-size: 1.15rem;
+        }
+
+        .brand span {
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--purple);
+            padding: 9px 13px;
+            border-radius: 8px;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        nav a {
+            display: block;
+            color: #655b70;
+            font-size: 0.77rem;
+            padding: 8px 10px;
+            border-radius: 7px;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a[aria-current="page"] {
+            background: var(--lilac);
+            color: var(--purple);
+        }
+
+        .hero {
+            background:
+                radial-gradient(circle at 85% 20%, rgba(190, 164, 224, 0.25), transparent 27%),
+                linear-gradient(125deg, #251536, #48305f 64%, #604a78);
+            color: white;
+            padding: 75px 7% 85px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "08";
+            position: absolute;
+            right: 5%;
+            bottom: -68px;
+            color: rgba(255, 255, 255, 0.055);
+            font-family: "Playfair Display", serif;
+            font-size: clamp(12rem, 30vw, 24rem);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            color: #dfd2f1;
+            font-size: 0.73rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 35px;
+            background: #c9b4e8;
+        }
+
+        h1, h2, h3 {
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .hero h1 {
+            max-width: 820px;
+            margin: 23px 0 18px;
+            font-size: clamp(2.7rem, 6.5vw, 5.1rem);
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 em {
+            color: #d9c7f2;
+            font-weight: 400;
+        }
+
+        .hero p {
+            max-width: 610px;
+            color: #e0d8e9;
+            font-size: 1rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .hero-meta span {
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 30px;
+            padding: 7px 13px;
+            color: #f0eaf7;
+            font-size: 0.77rem;
+        }
+
+        main {
+            max-width: 1180px;
+            margin: auto;
+            padding: 65px 5% 90px;
+        }
+
+        .section-heading {
+            margin-bottom: 32px;
+        }
+
+        .section-heading .eyebrow,
+        .section-intro .eyebrow {
+            color: #80649f;
+        }
+
+        .section-heading h2,
+        .section-intro h2 {
+            color: var(--purple);
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-top: 12px;
+        }
+
+        .section-heading p,
+        .section-intro p {
+            color: var(--muted);
+            max-width: 700px;
+            margin-top: 12px;
+        }
+
+        .intro-panel {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 30px;
+            align-items: center;
+            padding: 35px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            margin-bottom: 75px;
+        }
+
+        .intro-panel h2 {
+            color: var(--purple);
+            font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+            margin-bottom: 15px;
+        }
+
+        .intro-panel p {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .quote-panel {
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 30px;
+            background: linear-gradient(145deg, #eee7f7, #f9f6fc);
+            border: 1px solid #e4d9ef;
+            border-radius: 14px;
+        }
+
+        .quote-mark {
+            font-family: "Playfair Display", serif;
+            color: #9d83bc;
+            font-size: 4rem;
+            line-height: 0.9;
+        }
+
+        .quote-panel blockquote {
+            color: var(--purple);
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+            line-height: 1.45;
+            margin-top: 12px;
+        }
+
+        .quote-panel p {
+            margin-top: 15px;
+            color: #806b96;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+        }
+
+        .strategy-section,
+        .resources-section,
+        .weekly-section {
+            margin-bottom: 75px;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .strategy-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 27px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .strategy-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background: var(--lilac);
+            color: var(--purple);
+            font-family: "Playfair Display", serif;
+            font-size: 1.2rem;
+            margin-bottom: 19px;
+        }
+
+        .strategy-card h3 {
+            color: var(--purple);
+            font-size: 1.35rem;
+            margin-bottom: 10px;
+        }
+
+        .strategy-card p {
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .resource-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .resource-card {
+            display: grid;
+            grid-template-columns: 70px minmax(0, 1fr) auto;
+            gap: 22px;
+            align-items: center;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 23px 26px;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .resource-card:hover {
+            border-color: #cbb9df;
+            transform: translateX(3px);
+        }
+
+        .resource-symbol {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-lilac);
+            border: 1px solid #e6dcef;
+            border-radius: 14px;
+            color: var(--purple);
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+        }
+
+        .resource-card h3 {
+            color: var(--purple);
+            font-size: 1.35rem;
+            margin-bottom: 6px;
+        }
+
+        .resource-card p {
+            color: var(--muted);
+            font-size: 0.87rem;
+        }
+
+        .resource-type {
+            display: inline-block;
+            color: #82669f;
+            font-size: 0.68rem;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .resource-link {
+            display: inline-block;
+            background: var(--purple);
+            color: white;
+            padding: 10px 14px;
+            border-radius: 7px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+
+        .resource-link:hover {
+            background: #53376e;
+        }
+
+        .resource-disclaimer {
+            color: var(--muted);
+            font-size: 0.82rem;
+            margin-top: 17px;
+        }
+
+        .weekly-panel {
+            background: linear-gradient(130deg, #eee7f7, #faf7fd);
+            border: 1px solid #e3d8ef;
+            border-radius: 18px;
+            padding: 35px;
+        }
+
+        .weekly-panel h2 {
+            color: var(--purple);
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            margin-bottom: 10px;
+        }
+
+        .weekly-panel > p {
+            color: var(--muted);
+            max-width: 680px;
+            margin-bottom: 26px;
+            font-size: 0.9rem;
+        }
+
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.8);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .schedule th,
+        .schedule td {
+            text-align: left;
+            padding: 15px 17px;
+            border-bottom: 1px solid #e9e1f1;
+            font-size: 0.86rem;
+        }
+
+        .schedule th {
+            color: var(--purple);
+            background: #e6dcf2;
+            font-weight: 700;
+        }
+
+        .schedule td {
+            color: #62576c;
+        }
+
+        .schedule tr:last-child td {
+            border-bottom: none;
+        }
+
+        .personal-rules {
+            margin-top: 22px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .rule {
+            background: white;
+            border: 1px solid #e3d8ef;
+            border-radius: 12px;
+            padding: 19px;
+        }
+
+        .rule strong {
+            display: block;
+            color: var(--purple);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .rule p {
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .closing-panel {
+            margin-top: 75px;
+            padding: 40px;
+            background: var(--deep-purple);
+            border-radius: 18px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .closing-panel::after {
+            content: "✦";
+            position: absolute;
+            right: 35px;
+            top: 5px;
+            color: rgba(255,255,255,0.09);
+            font-size: 9rem;
+        }
+
+        .closing-panel .eyebrow {
+            color: #d9c7f2;
+        }
+
+        .closing-panel h2 {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            margin: 17px 0 13px;
+        }
+
+        .closing-panel p {
+            position: relative;
+            z-index: 1;
+            max-width: 650px;
+            color: #ddd2e8;
+            font-size: 0.94rem;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .related-links a {
+            display: inline-block;
+            color: #6d5488;
+            border-bottom: 1px solid #cdbce0;
+            padding-bottom: 3px;
+            font-size: 0.85rem;
+        }
+
+        .related-links a:hover {
+            color: var(--deep-purple);
+            border-color: var(--deep-purple);
+        }
+
+        footer {
+            background: var(--deep-purple);
+            color: #e7deef;
+            padding: 35px 5%;
+            margin-top: 60px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-title {
+            font-family: "Playfair Display", serif;
+            font-size: 1.25rem;
+            color: white;
+        }
+
+        footer p {
+            font-size: 0.78rem;
+            color: #c8bbd8;
+            margin-top: 5px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            font-size: 0.78rem;
+            color: #e7deef;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1000px) {
+            .nav-wrap {
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+            }
+
+            nav.open {
+                display: block;
+            }
+
+            nav ul {
+                justify-content: flex-start;
+                padding-top: 10px;
+            }
+
+            nav a {
+                padding: 9px 11px;
+            }
+
+            .strategy-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 760px) {
+            .hero {
+                padding: 58px 6% 68px;
+            }
+
+            main {
+                padding: 48px 5% 65px;
+            }
+
+            .intro-panel {
+                grid-template-columns: 1fr;
+                padding: 25px;
+            }
+
+            .resource-card {
+                grid-template-columns: 55px minmax(0, 1fr);
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .resource-symbol {
+                width: 52px;
+                height: 52px;
+                font-size: 1.25rem;
+            }
+
+            .resource-link {
+                grid-column: 2;
+                justify-self: start;
+            }
+
+            .personal-rules {
+                grid-template-columns: 1fr;
+            }
+
+            .closing-panel {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .brand strong {
+                font-size: 1rem;
+            }
+
+            .brand span {
+                font-size: 0.58rem;
+                letter-spacing: 1px;
+            }
+
+            .hero h1 {
+                font-size: 2.65rem;
+            }
+
+            .strategy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .weekly-panel {
+                padding: 20px;
+            }
+
+            .schedule th,
+            .schedule td {
+                padding: 11px 9px;
+                font-size: 0.76rem;
+            }
+
+            .quote-panel blockquote {
+                font-size: 1.3rem;
+            }
+
+            .resource-card h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="top-line"></div>
+
+    <header>
+        <div class="nav-wrap">
+            <a class="brand" href="index.html" aria-label="Thabile Khukhwane portfolio home">
+                <strong>Thabile Khukhwane</strong>
+                <span>Business Intelligence &amp; Data Analytics</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+                ☰ Menu
+            </button>
+
+            <nav id="main-navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="individual-reflection.html">Personal Reflection</a></li>
+                    <li><a href="group-reflection.html">Group Reflection</a></li>
+                    <li><a href="skills-projects.html">Skills &amp; Projects</a></li>
+                    <li><a href="application-letter.html">Application Letter</a></li>
+                    <li><a href="email-template.html">Email Template</a></li>
+                    <li><a href="study-resources.html" aria-current="page">Study Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <span class="eyebrow">Portfolio · Page 08</span>
+            <h1>Study with intention. <em>Grow without limits.</em></h1>
+            <p>
+                A collection of practical study strategies, academic research
+                platforms, and learning habits to support a journey in Business
+                Intelligence and Data Analytics.
+            </p>
+            <div class="hero-meta">
+                <span>Academic Growth</span>
+                <span>Independent Learning</span>
+                <span>Data &amp; Technology</span>
+            </div>
+        </div>
+    </section>
+
+    <main id="main-content">
+        <section class="intro-panel">
+            <div>
+                <span class="eyebrow">My learning philosophy</span>
+                <h2>Progress is built one focused session at a time.</h2>
+                <p>
+                    As a first-year BIDA student at Botswana Accountancy College,
+                    I am developing the habits and foundations needed to understand
+                    business, technology, data, and finance. Effective studying
+                    means engaging actively with what I learn, practising regularly,
+                    asking questions, and using credible sources when researching
+                    academic topics.
+                </p>
+            </div>
+
+            <div class="quote-panel">
+                <span class="quote-mark">“</span>
+                <blockquote>
+                    Stay curious. Think critically. Keep improving.
+                </blockquote>
+                <p>A personal reminder</p>
+            </div>
+        </section>
+
+        <section class="strategy-section">
+            <div class="section-heading">
+                <span class="eyebrow">Study smarter</span>
+                <h2>Six strategies for effective learning</h2>
+                <p>
+                    These approaches can help organise study time, strengthen
+                    understanding, and make challenging subjects feel more manageable.
+                </p>
+            </div>
+
+            <div class="strategy-grid">
+                <article class="strategy-card">
+                    <span class="strategy-number">01</span>
+                    <h3>Plan the week</h3>
+                    <p>
+                        List upcoming classes, assignments, tests, and deadlines.
+                        Break larger tasks into smaller steps and schedule time
+                        for each one.
+                    </p>
+                </article>
+
+                <article class="strategy-card">
+                    <span class="strategy-number">02</span>
+                    <h3>Practise active recall</h3>
+                    <p>
+                        Close your notes and explain a concept from memory.
+                        Use flashcards or practice questions to discover what
+                        you understand and what needs more work.
+                    </p>
+                </article>
+
+                <article class="strategy-card">
+                    <span class="strategy-number">03</span>
+                    <h3>Review over time</h3>
+                    <p>
+                        Revisit material across several days rather than relying
+                        on one long session immediately before an assessment.
+                    </p>
+                </article>
+
+                <article class="strategy-card">
+                    <span class="strategy-number">04</span>
+                    <h3>Practise with data</h3>
+                    <p>
+                        For analytics and mathematics, work through examples,
+                        interpret results, check calculations, and explain
+                        what your findings mean.
+                    </p>
+                </article>
+
+                <article class="strategy-card">
+                    <span class="strategy-number">05</span>
+                    <h3>Learn collaboratively</h3>
+                    <p>
+                        Discuss difficult concepts with classmates, compare
+                        approaches, and ask questions. Explain ideas in your
+                        own words instead of only copying notes.
+                    </p>
+                </article>
+
+                <article class="strategy-card">
+                    <span class="strategy-number">06</span>
+                    <h3>Protect your focus</h3>
+                    <p>
+                        Choose a manageable study goal, silence unnecessary
+                        notifications, take short breaks, and return to the
+                        task with renewed attention.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <div class="section-heading">
+                <span class="eyebrow">A digital learning library</span>
+                <h2>Useful academic resources</h2>
+                <p>
+                    These platforms can help with scholarly research, learning
+                    technical concepts, and developing practical skills. Follow
+                    your lecturer's instructions when selecting sources for assignments.
+                </p>
+            </div>
+
+            <div class="resource-list">
+                <article class="resource-card">
+                    <div class="resource-symbol" aria-hidden="true">G</div>
+                    <div>
+                        <span class="resource-type">Academic research</span>
+                        <h3>Google Scholar</h3>
+                        <p>
+                            Search for scholarly articles, books, theses, and
+                            academic publications related to business, finance,
+                            statistics, and data analytics.
+                        </p>
+                    </div>
+                    <a class="resource-link" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Explore resource ↗</a>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-symbol" aria-hidden="true">DO</div>
+                    <div>
+                        <span class="resource-type">Open-access research</span>
+                        <h3>DOAJ</h3>
+                        <p>
+                            The Directory of Open Access Journals helps readers
+                            discover open-access scholarly journals and articles.
+                        </p>
+                    </div>
+                    <a class="resource-link" href="https://doaj.org/" target="_blank" rel="noopener noreferrer">Explore resource ↗</a>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-symbol" aria-hidden="true">K</div>
+                    <div>
+                        <span class="resource-type">Data &amp; statistics</span>
+                        <h3>Khan Academy</h3>
+                        <p>
+                            Learn and practise mathematics, statistics, and other
+                            foundational subjects through structured lessons
+                            and exercises.
+                        </p>
+                    </div>
+                    <a class="resource-link" href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">Explore resource ↗</a>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-symbol" aria-hidden="true">MS</div>
+                    <div>
+                        <span class="resource-type">Digital productivity</span>
+                        <h3>Microsoft Support &amp; Learning</h3>
+                        <p>
+                            Consult official guides for Microsoft Excel, Word,
+                            PowerPoint, and other tools used in academic and
+                            professional work.
+                        </p>
+                    </div>
+                    <a class="resource-link" href="https://support.microsoft.com/" target="_blank" rel="noopener noreferrer">Explore resource ↗</a>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-symbol" aria-hidden="true">P</div>
+                    <div>
+                        <span class="resource-type">Programming practice</span>
+                        <h3>W3Schools</h3>
+                        <p>
+                            Use beginner-friendly tutorials and examples to
+                            practise programming and web development concepts.
+                            Check course requirements to ensure the material
+                            matches the language you are learning.
+                        </p>
+                    </div>
+                    <a class="resource-link" href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">Explore resource ↗</a>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-symbol" aria-hidden="true">BAC</div>
+                    <div>
+                        <span class="resource-type">Institutional learning</span>
+                        <h3>Botswana Accountancy College</h3>
+                        <p>
+                            Use official college channels and any library,
+                            learning-management, or database access provided
+                            to you for course materials and assignment research.
+                        </p>
+                    </div>
+                    <a class="resource-link" href="https://www.bac.ac.bw/" target="_blank" rel="noopener noreferrer">Visit college ↗</a>
+                </article>
+            </div>
+
+            <p class="resource-disclaimer">
+                Resource availability and access requirements may vary. Some
+                scholarly articles require institutional access or payment.
+                Always evaluate source credibility, publication dates, and
+                relevance before using material in academic work.
+            </p>
+        </section>
+
+        <section class="weekly-section">
+            <div class="weekly-panel">
+                <span class="eyebrow">A flexible routine</span>
+                <h2>A balanced weekly study plan</h2>
+                <p>
+                    This example can be adjusted around lectures, assignment
+                    deadlines, personal responsibilities, and rest. The goal is
+                    consistency, not following a rigid timetable every day.
+                </p>
+
+                <table class="schedule">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Study focus</th>
+                            <th>Suggested activity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Review lecture notes</td>
+                            <td>Summarise key ideas and list questions.</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Mathematics &amp; statistics</td>
+                            <td>Complete practice questions.</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Digital and technical skills</td>
+                            <td>Practise Excel, databases, or programming.</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Research and reading</td>
+                            <td>Find credible sources and take notes.</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Assignment progress</td>
+                            <td>Check requirements and complete a task.</td>
+                        </tr>
+                        <tr>
+                            <td>Weekend</td>
+                            <td>Review and recharge</td>
+                            <td>Recall key concepts, plan ahead, and rest.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="personal-rules">
+                    <div class="rule">
+                        <strong>Set one clear goal</strong>
+                        <p>Know what you want to complete before starting.</p>
+                    </div>
+                    <div class="rule">
+                        <strong>Measure understanding</strong>
+                        <p>Test yourself instead of only rereading material.</p>
+                    </div>
+                    <div class="rule">
+                        <strong>Make room for rest</strong>
+                        <p>Sleep and breaks are part of sustainable learning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="closing-panel">
+            <span class="eyebrow">The final page · The journey continues</span>
+            <h2>Every skill begins with a willingness to learn.</h2>
+            <p>
+                My academic journey is a work in progress. Through curiosity,
+                consistent practice, collaboration, and reflection, I aim to
+                strengthen my knowledge of business, data, and technology and
+                prepare for future opportunities in analytics and finance.
+            </p>
+        </section>
+
+        <div class="related-links" aria-label="Related portfolio pages">
+            <a href="email-template.html">← Email Template</a>
+            <a href="skills-projects.html">Skills &amp; Projects</a>
+            <a href="group-reflection.html">Group Reflection</a>
+            <a href="index.html">Return to portfolio home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-title">Thabile Khukhwane</div>
+                <p>Learning with purpose. Growing with intention.</p>
+                <p>© 2026 · Digital Academic Portfolio</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="individual-reflection.html">Personal Reflection</a>
+                <a href="group-reflection.html">Group Reflection</a>
+                <a href="application-letter.html">Application Letter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navigation = document.querySelector("#main-navigation");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navigation.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.innerHTML = isOpen ? "✕ Close" : "☰ Menu";
+        });
+    </script>
+</body>
+</html>
