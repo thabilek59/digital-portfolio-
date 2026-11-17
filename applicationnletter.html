@@ -1,0 +1,947 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Application letter of Thabile Khukhwane, a first-year Business Intelligence and Data Analytics student at Botswana Accountancy College.">
+    <meta name="author" content="Thabile Khukhwane">
+    <title>Application Letter | Thabile Khukhwane</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --purple: #35204f;
+            --deep-purple: #241334;
+            --lilac: #eee7f7;
+            --light-lilac: #f8f5fc;
+            --silver: #c8c2d2;
+            --ink: #30283a;
+            --muted: #777080;
+            --white: #ffffff;
+            --border: #e8e1ef;
+            --shadow: 0 20px 55px rgba(45, 25, 67, 0.09);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #faf8fc;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #a98bdb;
+            outline-offset: 4px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 12px;
+            top: -100px;
+            z-index: 1000;
+            background: white;
+            color: var(--purple);
+            padding: 12px 18px;
+            border-radius: 8px;
+        }
+
+        .skip-link:focus {
+            top: 12px;
+        }
+
+        .top-line {
+            height: 5px;
+            background: linear-gradient(90deg, #241334, #805da7, #d3c5e6, #805da7, #241334);
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-wrap {
+            max-width: 1240px;
+            margin: auto;
+            padding: 17px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.25;
+            flex-shrink: 0;
+        }
+
+        .brand strong {
+            color: var(--purple);
+            font-family: "Playfair Display", serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .brand span {
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--purple);
+            padding: 9px 13px;
+            border-radius: 8px;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        nav a {
+            display: block;
+            color: #655b70;
+            font-size: 0.77rem;
+            padding: 8px 10px;
+            border-radius: 7px;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a[aria-current="page"] {
+            background: var(--lilac);
+            color: var(--purple);
+        }
+
+        .hero {
+            background:
+                radial-gradient(circle at 85% 20%, rgba(190, 164, 224, 0.25), transparent 27%),
+                linear-gradient(125deg, #251536, #48305f 64%, #604a78);
+            color: white;
+            padding: 75px 7% 85px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "06";
+            position: absolute;
+            right: 5%;
+            bottom: -68px;
+            color: rgba(255, 255, 255, 0.055);
+            font-family: "Playfair Display", serif;
+            font-size: clamp(12rem, 30vw, 24rem);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            color: #dfd2f1;
+            font-size: 0.73rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 35px;
+            background: #c9b4e8;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .hero h1 {
+            max-width: 780px;
+            margin: 23px 0 18px;
+            font-size: clamp(2.7rem, 6.5vw, 5.1rem);
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 em {
+            color: #d9c7f2;
+            font-weight: 400;
+        }
+
+        .hero p {
+            max-width: 590px;
+            color: #e0d8e9;
+            font-size: 1rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .hero-meta span {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 30px;
+            padding: 7px 13px;
+            color: #f0eaf7;
+            font-size: 0.77rem;
+        }
+
+        main {
+            max-width: 1180px;
+            margin: auto;
+            padding: 65px 5% 90px;
+        }
+
+        .section-heading {
+            margin-bottom: 35px;
+        }
+
+        .section-heading .eyebrow {
+            color: #80649f;
+        }
+
+        .section-heading h2 {
+            color: var(--purple);
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-top: 12px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            max-width: 650px;
+            margin-top: 12px;
+        }
+
+        .letter-layout {
+            display: grid;
+            grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.7fr);
+            gap: 30px;
+            align-items: start;
+        }
+
+        .sidebar {
+            display: grid;
+            gap: 18px;
+        }
+
+        .info-card {
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 10px 28px rgba(45, 25, 67, 0.035);
+        }
+
+        .info-card .small-label {
+            display: block;
+            color: #8b76a4;
+            font-size: 0.69rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .info-card h3 {
+            font-size: 1.45rem;
+            color: var(--purple);
+            margin-bottom: 12px;
+        }
+
+        .info-card p,
+        .info-card li {
+            color: var(--muted);
+            font-size: 0.88rem;
+            overflow-wrap: anywhere;
+        }
+
+        .info-card ul {
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .contact-line {
+            margin-top: 10px;
+        }
+
+        .contact-line strong {
+            display: block;
+            font-size: 0.72rem;
+            color: var(--purple);
+            margin-bottom: 2px;
+        }
+
+        .contact-line a {
+            color: #75608f;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-line a:hover {
+            text-decoration: underline;
+        }
+
+        .letter-paper {
+            background: white;
+            border: 1px solid #e6dfed;
+            border-radius: 5px;
+            padding: clamp(25px, 5vw, 58px);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .letter-paper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--purple), #a58bc4, #d6c9e5);
+        }
+
+        .letter-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 28px;
+        }
+
+        .letter-name {
+            color: var(--purple);
+            font-family: "Playfair Display", serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        .letter-subtitle {
+            color: var(--muted);
+            font-size: 0.78rem;
+            margin-top: 5px;
+        }
+
+        .letter-mark {
+            border: 1px solid #d9cce8;
+            color: #7b6299;
+            padding: 8px 10px;
+            font-size: 0.68rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .letter-address {
+            display: grid;
+            gap: 4px;
+            margin-bottom: 25px;
+            color: #62596b;
+            font-size: 0.89rem;
+        }
+
+        .letter-address strong {
+            color: var(--purple);
+            font-size: 0.95rem;
+        }
+
+        .letter-date {
+            color: var(--muted);
+            font-size: 0.84rem;
+            margin-bottom: 25px;
+        }
+
+        .letter-subject {
+            color: var(--purple);
+            font-size: 0.92rem;
+            font-weight: 700;
+            margin-bottom: 23px;
+        }
+
+        .letter-body {
+            color: #514957;
+            font-size: 0.94rem;
+            line-height: 1.9;
+        }
+
+        .letter-body p {
+            margin-bottom: 19px;
+        }
+
+        .letter-body .salutation {
+            color: var(--purple);
+            font-weight: 600;
+        }
+
+        .signature {
+            margin-top: 28px;
+            color: #5f536d;
+            font-size: 0.9rem;
+        }
+
+        .signature strong {
+            display: block;
+            color: var(--purple);
+            font-family: "Playfair Display", serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .letter-note {
+            margin-top: 28px;
+            background: var(--light-lilac);
+            border-left: 4px solid #9b80bd;
+            border-radius: 0 10px 10px 0;
+            padding: 19px 22px;
+        }
+
+        .letter-note h3 {
+            color: var(--purple);
+            font-size: 1.15rem;
+            margin-bottom: 7px;
+        }
+
+        .letter-note p {
+            color: var(--muted);
+            font-size: 0.86rem;
+        }
+
+        .letter-note strong {
+            color: var(--purple);
+        }
+
+        .next-section {
+            margin-top: 70px;
+            padding: 35px;
+            border-radius: 18px;
+            background: linear-gradient(130deg, #eee7f7, #faf7fd);
+            border: 1px solid #e3d8ef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .next-section h2 {
+            color: var(--purple);
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            margin-bottom: 8px;
+        }
+
+        .next-section p {
+            max-width: 570px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .button-link {
+            display: inline-block;
+            flex-shrink: 0;
+            background: var(--purple);
+            color: white;
+            padding: 13px 20px;
+            border-radius: 7px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .button-link:hover {
+            background: #53376e;
+            transform: translateY(-2px);
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .related-links a {
+            color: #6d5488;
+            border-bottom: 1px solid #cdbce0;
+            padding-bottom: 3px;
+            font-size: 0.85rem;
+        }
+
+        .related-links a:hover {
+            color: var(--deep-purple);
+            border-color: var(--deep-purple);
+        }
+
+        footer {
+            background: var(--deep-purple);
+            color: #e7deef;
+            padding: 35px 5%;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-title {
+            font-family: "Playfair Display", serif;
+            font-size: 1.25rem;
+            color: white;
+        }
+
+        footer p {
+            font-size: 0.78rem;
+            color: #c8bbd8;
+            margin-top: 5px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            font-size: 0.78rem;
+            color: #e7deef;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1000px) {
+            .nav-wrap {
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+            }
+
+            nav.open {
+                display: block;
+            }
+
+            nav ul {
+                justify-content: flex-start;
+                padding-top: 10px;
+            }
+
+            nav a {
+                padding: 9px 11px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .hero {
+                padding: 58px 6% 68px;
+            }
+
+            main {
+                padding: 48px 5% 65px;
+            }
+
+            .letter-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+
+            .next-section {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 27px;
+            }
+
+            .letter-top {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .brand strong {
+                font-size: 1rem;
+            }
+
+            .brand span {
+                font-size: 0.58rem;
+                letter-spacing: 1px;
+            }
+
+            .menu-toggle {
+                font-size: 0.82rem;
+            }
+
+            .hero h1 {
+                font-size: 2.65rem;
+            }
+
+            .letter-paper {
+                padding: 25px 20px;
+            }
+
+            .letter-mark {
+                white-space: normal;
+            }
+
+            .info-card {
+                padding: 21px;
+            }
+        }
+
+        @media print {
+            header,
+            .hero,
+            .sidebar,
+            .section-heading,
+            .letter-note,
+            .next-section,
+            .related-links,
+            footer,
+            .skip-link {
+                display: none !important;
+            }
+
+            body,
+            main {
+                background: white;
+                padding: 0;
+                margin: 0;
+                max-width: none;
+            }
+
+            .letter-layout {
+                display: block;
+            }
+
+            .letter-paper {
+                border: none;
+                box-shadow: none;
+                padding: 15mm;
+            }
+
+            .letter-paper::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="top-line"></div>
+
+    <header>
+        <div class="nav-wrap">
+            <a class="brand" href="index.html" aria-label="Thabile Khukhwane portfolio home">
+                <strong>Thabile Khukhwane</strong>
+                <span>Business Intelligence &amp; Data Analytics</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+                ☰ Menu
+            </button>
+
+            <nav id="main-navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="individual-reflection.html">Personal Reflection</a></li>
+                    <li><a href="group-reflection.html">Group Reflection</a></li>
+                    <li><a href="skills-projects.html">Skills &amp; Projects</a></li>
+                    <li><a href="application-letter.html" aria-current="page">Application Letter</a></li>
+                    <li><a href="email-template.html">Email Template</a></li>
+                    <li><a href="study-resources.html">Study Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <span class="eyebrow">Portfolio · Page 06</span>
+            <h1>Ambition, expressed with <em>purpose.</em></h1>
+            <p>
+                A professional application letter reflecting Thabile’s academic journey,
+                interest in data and finance, and commitment to continuous learning.
+            </p>
+            <div class="hero-meta">
+                <span>Professional Communication</span>
+                <span>Entry-Level Opportunities</span>
+                <span>BIDA · First Year</span>
+            </div>
+        </div>
+    </section>
+
+    <main id="main-content">
+        <section class="section-heading">
+            <span class="eyebrow">A professional introduction</span>
+            <h2>Letter of application</h2>
+            <p>
+                A formal introduction to a prospective employer, designed to communicate
+                academic interests, relevant foundational skills, and enthusiasm for
+                gaining practical experience.
+            </p>
+        </section>
+
+        <div class="letter-layout">
+            <aside class="sidebar" aria-label="Application details">
+                <section class="info-card">
+                    <span class="small-label">Applicant profile</span>
+                    <h3>Thabile Khukhwane</h3>
+                    <p>
+                        First-year Business Intelligence and Data Analytics student
+                        at Botswana Accountancy College.
+                    </p>
+
+                    <div class="contact-line">
+                        <strong>EMAIL</strong>
+                        <a href="mailto:Khukhwaneethabilea@gmail.com">Khukhwaneethabilea@gmail.com</a>
+                    </div>
+
+                    <div class="contact-line">
+                        <strong>PHONE</strong>
+                        <a href="tel:72937667">72937667</a>
+                    </div>
+                </section>
+
+                <section class="info-card">
+                    <span class="small-label">What the letter highlights</span>
+                    <h3>Skills &amp; potential</h3>
+                    <ul>
+                        <li>Foundational computer and digital skills</li>
+                        <li>Familiarity with Microsoft Office tools</li>
+                        <li>Basic programming and database knowledge</li>
+                        <li>Interest in data interpretation and finance</li>
+                        <li>Curiosity, adaptability, and willingness to learn</li>
+                    </ul>
+                </section>
+
+                <section class="info-card">
+                    <span class="small-label">Career direction</span>
+                    <h3>Building a foundation</h3>
+                    <p>
+                        Developing towards opportunities in data analysis, financial
+                        analysis, and technology-driven business environments.
+                    </p>
+                </section>
+            </aside>
+
+            <article class="letter-paper" aria-label="Application letter">
+                <div class="letter-top">
+                    <div>
+                        <div class="letter-name">Thabile Khukhwane</div>
+                        <div class="letter-subtitle">
+                            BIDA Student · Botswana Accountancy College
+                        </div>
+                    </div>
+                    <div class="letter-mark">Professional Correspondence</div>
+                </div>
+
+                <div class="letter-address">
+                    <strong>Thabile Khukhwane</strong>
+                    <span>Botswana Accountancy College</span>
+                    <span>Phone: 72937667</span>
+                    <span>Email: Khukhwaneethabilea@gmail.com</span>
+                </div>
+
+                <p class="letter-date">Date: [Insert application date]</p>
+
+                <div class="letter-address">
+                    <strong>[Hiring Manager’s Name]</strong>
+                    <span>[Organisation Name]</span>
+                    <span>[Organisation Address]</span>
+                </div>
+
+                <p class="letter-subject">
+                    RE: Application for an Entry-Level or Internship Opportunity
+                    in Data or Financial Analysis
+                </p>
+
+                <div class="letter-body">
+                    <p class="salutation">Dear Hiring Manager,</p>
+
+                    <p>
+                        I am writing to express my interest in an entry-level or
+                        internship opportunity where I can develop my skills and
+                        gain practical exposure to the fields of data analysis,
+                        financial analysis, and business technology. I am currently
+                        a first-year student at Botswana Accountancy College,
+                        studying Business Intelligence and Data Analytics (BIDA).
+                    </p>
+
+                    <p>
+                        My studies have strengthened my interest in understanding
+                        information, solving problems, and exploring how data can
+                        support informed business decisions. I have developed
+                        foundational skills in computer literacy, Microsoft Office
+                        applications, basic programming, database management using
+                        Microsoft Access, and the interpretation of data. I am
+                        eager to continue building these skills through practical
+                        learning and professional guidance.
+                    </p>
+
+                    <p>
+                        I consider myself a curious, ambitious, and adaptable
+                        learner who is willing to take responsibility, ask
+                        questions, and improve through feedback. My experience
+                        serving as a class monitor and school prefect also helped
+                        me appreciate the importance of responsibility, cooperation,
+                        and contributing positively to a group.
+                    </p>
+
+                    <p>
+                        Although I am at the beginning of my professional journey,
+                        I am motivated to learn from experienced individuals and
+                        contribute wherever my current abilities can be useful.
+                        I would welcome an opportunity to apply my developing
+                        analytical and digital skills while gaining a clearer
+                        understanding of professional practices in a business
+                        environment.
+                    </p>
+
+                    <p>
+                        Thank you for considering my application. I would
+                        appreciate the opportunity to discuss how my academic
+                        background, enthusiasm, and commitment to learning could
+                        contribute to your organisation. I look forward to hearing
+                        from you.
+                    </p>
+
+                    <p class="salutation">Yours sincerely,</p>
+
+                    <div class="signature">
+                        <strong>Thabile Khukhwane</strong>
+                        BIDA Student<br>
+                        Botswana Accountancy College
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <section class="letter-note">
+            <h3>Before sending this letter</h3>
+            <p>
+                This is a portfolio sample. For a real application, replace
+                <strong>[Insert application date]</strong> and the employer
+                placeholders with the correct details. Adjust the subject and
+                relevant paragraphs to match the advertised role, and make sure
+                every statement reflects your actual skills and experience.
+            </p>
+        </section>
+
+        <section class="next-section">
+            <div>
+                <h2>Professional communication matters.</h2>
+                <p>
+                    A strong application letter works alongside a clear, respectful
+                    email. Explore the next page for a professional email template
+                    that can be adapted for academic or workplace communication.
+                </p>
+            </div>
+            <a class="button-link" href="email-template.html">Explore Email Template →</a>
+        </section>
+
+        <div class="related-links" aria-label="Related portfolio pages">
+            <a href="cv.html">← Review my CV</a>
+            <a href="skills-projects.html">Explore my skills and projects</a>
+            <a href="index.html">Return to home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-title">Thabile Khukhwane</div>
+                <p>Learning with purpose. Growing with intention.</p>
+                <p>© 2026 · Digital Academic Portfolio</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="group-reflection.html">Group Reflection</a>
+                <a href="email-template.html">Email Template</a>
+                <a href="study-resources.html">Study Resources</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navigation = document.querySelector("#main-navigation");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navigation.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.innerHTML = isOpen ? "✕ Close" : "☰ Menu";
+        });
+    </script>
+</body>
+</html>
