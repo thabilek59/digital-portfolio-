@@ -620,6 +620,199 @@
                 transition-duration: .01ms !important;
             }
         }
+
+        
+/* =================================
+   REFLECTIVE BLOG — LUXURY EDITORIAL
+================================= */
+
+.reflection-section {
+    padding: 90px 7%;
+    background: linear-gradient(
+        145deg,
+        #f8f4fc 0%,
+        #ffffff 48%,
+        #eee5f6 100%
+    );
+    color: #30213e;
+    position: relative;
+    overflow: hidden;
+}
+
+.reflection-header {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.reflection-eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+    color: #8b70a8;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.reflection-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 0 22px;
+    color: #38234c;
+}
+
+.reflection-header h2 em {
+    color: #9271b2;
+    font-weight: 400;
+}
+
+.reflection-intro {
+    max-width: 570px;
+    margin: 0 auto;
+    color: #71657b;
+    line-height: 1.9;
+    font-size: 1rem;
+}
+
+.reflection-divider {
+    width: 85px;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        #c7b2df,
+        #8e6bb0,
+        #c7b2df
+    );
+    margin: 30px auto 0;
+}
+
+.reflection-feature {
+    max-width: 900px;
+    margin: 0 auto 28px;
+    padding: 42px;
+    border: 1px solid #ded0eb;
+    border-left: 4px solid #8c6aaa;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 15px 45px rgba(57, 34, 77, 0.06);
+}
+
+.reflection-number {
+    display: block;
+    color: #9576b2;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
+}
+
+.reflection-feature h3,
+.reflection-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.65rem;
+    font-weight: 400;
+    color: #412951;
+    margin: 0 0 16px;
+}
+
+.reflection-feature p,
+.reflection-card p {
+    color: #685d70;
+    font-size: 0.96rem;
+    line-height: 1.95;
+    margin: 0;
+}
+
+.reflection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.reflection-card {
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid #e5d9ee;
+    border-radius: 5px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.reflection-card:hover {
+    transform: translateY(-5px);
+    border-color: #bca3d4;
+    box-shadow: 0 16px 35px rgba(57, 34, 77, 0.09);
+}
+
+.reflection-quote {
+    max-width: 850px;
+    margin: 65px auto 0;
+    padding: 45px 25px;
+    text-align: center;
+    border-top: 1px solid #cdbbdf;
+    border-bottom: 1px solid #cdbbdf;
+}
+
+.quote-mark {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 5rem;
+    line-height: 0.8;
+    color: #a58ac1;
+}
+
+.reflection-quote blockquote {
+    max-width: 690px;
+    margin: 20px auto;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-style: italic;
+    line-height: 1.6;
+    color: #493057;
+}
+
+.quote-caption {
+    font-size: 0.68rem;
+    letter-spacing: 3px;
+    color: #9175a8;
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+    .reflection-section {
+        padding: 60px 5%;
+    }
+
+    .reflection-header {
+        margin-bottom: 35px;
+    }
+
+    .reflection-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .reflection-feature,
+    .reflection-card {
+        padding: 25px 22px;
+    }
+
+    .reflection-feature h3,
+    .reflection-card h3 {
+        font-size: 1.45rem;
+    }
+
+    .reflection-quote {
+        margin-top: 45px;
+        padding: 35px 12px;
+    }
+}
+
     </style>
 </head>
 
@@ -851,6 +1044,130 @@
                 and learn from the people around me.
             </p>
             <p class="signature">Growing with purpose, one experience at a time.</p>
+
+            
+<!-- REFLECTIVE BLOG POST: GROUP WORK -->
+<section id="reflection" class="reflection-section">
+    <div class="reflection-header">
+        <span class="reflection-eyebrow">PERSONAL GROWTH · TEAMWORK</span>
+        <h2>Reflections on <em>Group Work</em></h2>
+        <p class="reflection-intro">
+            A personal reflection on collaboration, communication,
+            challenges and the journey of working together as a team.
+        </p>
+        <div class="reflection-divider"></div>
+    </div>
+
+    <article class="reflection-feature">
+        <span class="reflection-number">01 / MY EXPERIENCE</span>
+        <h3>Where Our Journey Began</h3>
+        <p>
+            Our group was formed to work together towards a shared academic
+            goal. At the beginning, we had to become familiar with one
+            another, understand our individual strengths and identify how
+            we could contribute to the task. The forming stage was an
+            opportunity to introduce ourselves, exchange ideas and begin
+            building a foundation for collaboration.
+        </p>
+    </article>
+
+    <div class="reflection-grid">
+
+        <article class="reflection-card">
+            <span class="reflection-number">02</span>
+            <h3>The Forming Stage</h3>
+            <p>
+                During the forming stage, we were still getting to know
+                one another and understanding how each person preferred
+                to work. We needed to communicate our ideas, clarify
+                expectations and establish our common goal. This stage
+                taught me that successful teamwork begins with openness,
+                patience and a willingness to listen.
+            </p>
+        </article>
+
+        <article class="reflection-card">
+            <span class="reflection-number">03</span>
+            <h3>Navigating Challenges</h3>
+            <p>
+                Working in a group can bring different opinions,
+                communication difficulties and challenges with
+                coordinating tasks. When challenges arise, it is
+                important to remain respectful, listen to different
+                perspectives and focus on finding solutions. This
+                experience helped me understand that disagreements can
+                become opportunities for learning when they are handled
+                constructively.
+            </p>
+        </article>
+
+        <article class="reflection-card">
+            <span class="reflection-number">04</span>
+            <h3>Finding Our Rhythm</h3>
+            <p>
+                As we continued working together, we had the opportunity
+                to develop shared expectations and a better understanding
+                of our responsibilities. Clearer communication,
+                cooperation and the sharing of ideas helped us work
+                towards our goal. The norming stage showed me the value
+                of accountability, consistency and mutual respect.
+            </p>
+        </article>
+
+        <article class="reflection-card">
+            <span class="reflection-number">05</span>
+            <h3>Working as One</h3>
+            <p>
+                The performing stage represents a team working more
+                confidently and effectively towards its objectives.
+                Through collaboration, members can contribute their
+                strengths, support one another and make progress on
+                shared tasks. This stage highlights how preparation,
+                commitment and effective communication can improve
+                the quality of group work.
+            </p>
+        </article>
+
+        <article class="reflection-card">
+            <span class="reflection-number">06</span>
+            <h3>Bringing It to a Close</h3>
+            <p>
+                The adjourning stage marks the conclusion of the group's
+                work. It provides an opportunity to reflect on what we
+                accomplished, recognise individual contributions and
+                consider what could be improved in future collaborations.
+                Completing a shared task can also bring a sense of
+                achievement and personal growth.
+            </p>
+        </article>
+
+        <article class="reflection-card">
+            <span class="reflection-number">07</span>
+            <h3>Lessons I Will Carry Forward</h3>
+            <p>
+                This group work experience helped me appreciate the
+                importance of active listening, clear communication,
+                responsibility and respect for different perspectives.
+                I learned that teamwork requires more than dividing
+                tasks; it involves supporting one another, managing
+                challenges constructively and remaining committed to a
+                common goal. These lessons will guide me in future
+                academic and professional settings.
+            </p>
+        </article>
+
+    </div>
+
+    <div class="reflection-quote">
+        <span class="quote-mark">“</span>
+        <blockquote>
+            Collaboration is not simply about working together;
+            it is about learning, growing and achieving more together.
+        </blockquote>
+        <span class="quote-caption">A REFLECTION ON TEAMWORK</span>
+    </div>
+</section>
+
 
             <div class="page-links">
                 <a class="primary" href="individual-reflection.html">← Personal Reflection</a>
